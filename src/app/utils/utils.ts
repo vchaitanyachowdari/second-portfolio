@@ -74,9 +74,11 @@ export function getPosts(customPath = ["", "", "", ""]) {
 }
 
 export function formatDate(date: string) {
-  return new Date(date).toLocaleDateString("en-US", {
+  const d = new Date(date);
+  return d.toLocaleDateString("en-US", {
     year: "numeric",
     month: "long",
     day: "numeric",
+    timeZone: "UTC",
   });
 }
