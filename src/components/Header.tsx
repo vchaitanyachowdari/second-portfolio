@@ -7,7 +7,7 @@ import { Fade, Flex, Line, ToggleButton } from "@/once-ui/components";
 import styles from "@/components/Header.module.scss";
 
 import { routes, display } from "@/app/resources";
-import { person, about, resources, blog, work, gallery } from "@/app/resources/content";
+import { person, about, resources, blog, work, gallery, techStack, services } from "@/app/resources/content";
 import { ThemeToggle } from "./ThemeToggle";
 
 type TimeDisplayProps = {
@@ -162,6 +162,40 @@ export const Header = () => {
                     href="/resource"
                     label={resources.label}
                     selected={pathname.startsWith("/resource")}
+                  />
+                </>
+              )}
+              {routes["/tech-stack"] && techStack && (
+                <>
+                  <ToggleButton
+                    className="s-flex-hide"
+                    prefixIcon="code" // Assuming 'code' is a valid icon name
+                    href="/tech-stack"
+                    label={techStack.label}
+                    selected={pathname.startsWith("/tech-stack")}
+                  />
+                  <ToggleButton
+                    className="s-flex-show"
+                    prefixIcon="code" // Assuming 'code' is a valid icon name
+                    href="/tech-stack"
+                    selected={pathname.startsWith("/tech-stack")}
+                  />
+                </>
+              )}
+              {routes["/services"] && services && (
+                <>
+                  <ToggleButton
+                    className="s-flex-hide"
+                    prefixIcon="settings" // Assuming 'settings' is a valid icon name
+                    href="/services"
+                    label={services.label}
+                    selected={pathname.startsWith("/services")}
+                  />
+                  <ToggleButton
+                    className="s-flex-show"
+                    prefixIcon="settings" // Assuming 'settings' is a valid icon name
+                    href="/services"
+                    selected={pathname.startsWith("/services")}
                   />
                 </>
               )}

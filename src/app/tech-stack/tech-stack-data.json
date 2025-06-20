@@ -1,0 +1,57 @@
+[
+  {
+    "appName": "React.js",
+    "category": "Frontend Framework",
+    "type": "Free/Open Source",
+    "description": "A JavaScript library for building user interfaces. Known for its declarative views, component-based architecture, and efficiency.",
+    "usage": "Used for building interactive and dynamic single-page applications.",
+    "documentationLinks": {
+      "official": "https://react.dev/docs/getting-started",
+      "communityTutorials": "https://www.youtube.com/c/freecodecamp/search?query=react"
+    },
+    "installationSetup": "npm install react react-dom",
+    "selfHostedOption": "N/A (library, not a self-hostable application)",
+    "integrationExamples": ["Integration with Redux for state management", "Using React Router for navigation"]
+  },
+  {
+    "appName": "Node.js",
+    "category": "Backend Runtime Environment",
+    "type": "Free/Open Source",
+    "description": "An open-source, cross-platform JavaScript runtime environment that executes JavaScript code outside a web browser.",
+    "usage": "Used for building scalable network applications, APIs, and microservices.",
+    "documentationLinks": {
+      "official": "https://nodejs.org/docs/latest/api/",
+      "communityTutorials": "https://www.w3schools.com/nodejs/"
+    },
+    "installationSetup": "Download installer from nodejs.org or use nvm",
+    "selfHostedOption": "Yes, typically deployed on servers (e.g., EC2, DigitalOcean)",
+    "integrationExamples": ["Building RESTful APIs with Express.js", "Real-time applications with Socket.IO"]
+  },
+  {
+    "appName": "AWS (Amazon Web Services)",
+    "category": "Cloud Platform",
+    "type": "Subscription-Based",
+    "description": "A comprehensive, broadly adopted, and secure cloud platform, offering over 200 fully featured services from data centers globally.",
+    "usage": "Infrastructure hosting, database management, serverless computing, machine learning, and more.",
+    "documentationLinks": {
+      "official": "https://docs.aws.amazon.com/"
+    },
+    "installationSetup": "Account creation on aws.amazon.com, configure AWS CLI",
+    "selfHostedOption": "No (fully managed cloud service)",
+    "keyServicesUsed": ["EC2 (Compute)", "S3 (Storage)", "RDS (Database)", "Lambda (Serverless)"],
+    "costManagementStrategies": ["Using reserved instances", "Spot instances", "Cost Explorer"]
+  },
+  {
+    "appName": "Figma",
+    "category": "Design & Prototyping",
+    "type": "Subscription-Based (with free tier)",
+    "description": "A collaborative web-based UI/UX design application.",
+    "usage": "Wireframing, prototyping, user interface design, design system creation.",
+    "documentationLinks": {
+      "official": "https://help.figma.com/hc/en-us"
+    },
+    "installationSetup": "Web-based, desktop app available",
+    "selfHostedOption": "No (SaaS)",
+    "collaborationFeatures": ["Real-time collaboration", "Version history", "Commenting"]
+  }
+]
