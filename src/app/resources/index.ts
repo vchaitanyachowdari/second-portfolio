@@ -12,10 +12,12 @@ export {
 export {
   person,
   social,
-  newsletter,
-  home,
   about,
+  resources,
+  home,
   blog,
-  work,
-  gallery,
+  // work,
+  // gallery,
+  // resourcePages,
+  testimonials,
 } from "@/app/resources/content";

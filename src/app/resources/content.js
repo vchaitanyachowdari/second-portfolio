@@ -455,6 +455,47 @@ const resources = {
   description: `Useful resources and tools curated by ${person.name}`,
 };
 
+const resourcePages = [
+  {
+    title: "8 Open-Source Tools for AI SaaS App Development (2025 Edition)",
+    summary: "Explore 8 pivotal open-source tools to build and scale your next AI SaaS application, covering agent orchestration, frontend integration, secure code execution, RAG pipelines, vector databases, and marketing automation.",
+    image: "/images/og/anthropic-circuit-tools.jpg",
+    tag: "AI SaaS Development",
+    link: "https://your-link-here.com",
+    category: "Featured"
+  },
+  {
+    title: "Another Resource Title",
+    summary: "A summary for another resource.",
+    image: "/images/og/another-image.jpg",
+    tag: "Web Tools",
+    link: "https://another-link.com",
+    category: "Guide"
+  }
+];
+
+/**
+ * @typedef {Object} Testimonial
+ * @property {string} name
+ * @property {string} title
+ * @property {string} company
+ * @property {string} image
+ * @property {string} quote
+ */
+
+/** @type {Testimonial[]} */
+const testimonials = [
+  {
+    name: "Kolaparthi Hazitha",
+    title: "Senior Software Engineer",
+    company: "Capgemini",
+    image: "/images/avatar.jpg",
+    quote:
+      "I had the opportunity to work with Mahesh for two years. He is a talented and hardworking individual who is always eager to explore new technologies. His collaborative nature and knowledge-sharing attitude made him a valuable team member. I look forward to working with him again.",
+  },
+  // Add more testimonials here
+];
+
 export {
   person,
   social,
@@ -465,4 +506,6 @@ export {
   work,
   gallery,
   resources,
+  resourcePages,
+  testimonials,
 };

@@ -1,5 +1,4 @@
 import {
-  Avatar,
   Button,
   Column,
   Flex,
@@ -9,11 +8,16 @@ import {
   SmartImage,
   Tag,
   Text,
+  Carousel,
+  Card,
+  Avatar,
 } from "@/once-ui/components";
 import { baseURL } from "@/app/resources";
 import TableOfContents from "@/components/about/TableOfContents";
 import styles from "@/components/about/about.module.scss";
-import { person, about, social } from "@/app/resources/content";
+import testimonialStyles from "@/components/about/about-testimonials.module.scss";
+import { person, about, social } from "@/app/resources";
+import { testimonials } from "@/app/resources/content";
 import React from "react";
 import { Meta, Schema } from "@/once-ui/modules";
 
@@ -314,6 +318,43 @@ export default function About() {
               </Column>
             </>
           )}
+
+          {/* Testimonial Section - Clean Card Style */}
+          <Column marginTop="56" marginBottom="56" fillWidth >
+            <div className={testimonialStyles.testimonialSectionLight}>
+              <Heading as="h2" variant="display-strong-s" className={testimonialStyles.testimonialTitleLight}>
+                Testimonials
+              </Heading>
+              <Column gap="32" fillWidth>
+                {testimonials.map((testimonial, idx) => (
+                  <div className={testimonialStyles.testimonialCardLight} key={testimonial.name + idx}>
+                    <Flex gap="20" align="start" className={testimonialStyles.testimonialCardFlex}>
+                      <Avatar
+                        src={testimonial.image}
+                        size={12}
+                        className={testimonialStyles.testimonialAvatarLight}
+                      />
+                      <div className={testimonialStyles.testimonialContentLight}>
+                        <Text variant="heading-strong-m" className={testimonialStyles.testimonialNameLight}>
+                          {testimonial.name}
+                        </Text>
+                        <Text variant="body-default-xs" className={testimonialStyles.testimonialTitleRoleLight}>
+                          {testimonial.title} at {testimonial.company}
+                        </Text>
+                        <Flex gap="8" align="start" className={testimonialStyles.testimonialQuoteRow}>
+                          <span className={testimonialStyles.testimonialQuoteMark}>&ldquo;</span>
+                          <Text as="p" className={testimonialStyles.testimonialQuoteLight}>
+                            {testimonial.quote}
+                          </Text>
+                          <span className={testimonialStyles.testimonialQuoteMark}>&rdquo;</span>
+                        </Flex>
+                      </div>
+                    </Flex>
+                  </div>
+                ))}
+              </Column>
+            </div>
+          </Column>
         </Column>
       </Flex>
     </Column>
