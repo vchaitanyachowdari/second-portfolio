@@ -349,6 +349,20 @@ const blog = {
   // All posts will be listed on the /blog route
 };
 
+const techStack = {
+  path: "/tech-stack",
+  label: "Tech Stack",
+  title: `Tech Stack – ${person.name}`,
+  description: `Technologies and tools used by ${person.name}`,
+};
+
+const services = {
+  path: "/services",
+  label: "Services",
+  title: `Services – ${person.name}`,
+  description: `Services offered by ${person.name}`,
+};
+
 const work = {
   path: "/work",
   label: "Work",
@@ -503,6 +517,8 @@ export {
   home,
   about,
   blog,
+  techStack, // Added techStack
+  services,  // Added services
   work,
   gallery,
   resources,

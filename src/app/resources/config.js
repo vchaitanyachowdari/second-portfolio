@@ -8,6 +8,8 @@ const routes = {
   "/blog": true,
   "/gallery": true,
   "/resource": true,
+  "/tech-stack": true,
+  "/services": true,
 };
 
 // Enable password protection on selected routes
