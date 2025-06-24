@@ -1,12 +1,13 @@
 .serviceBlock {
   padding: var(--static-space-48, 48px) var(--static-space-24, 24px);
-  border-bottom: 1px solid var(--border-neutral-alpha-soft, #f0f0f0); /* Subtle separator */
+  border-bottom: var(--border-width-s, 1px) solid var(--border-neutral-alpha-soft, #f0f0f0); /* Used variable for border width */
   background-color: var(--surface-default, #fff);
   display: flex;
   flex-direction: column; /* Default for mobile */
   gap: var(--static-space-32, 32px);
   align-items: center; /* Center content for single column layout */
   text-align: center; /* Center text for single column layout */
+  transition: background-color 0.3s ease, border-color 0.3s ease; /* Added for theme transitions */
 }
 
 /* On wider screens, use a two-column layout */
@@ -26,31 +27,28 @@
 
 .iconArea {
   flex-shrink: 0;
-  /* width and height can be determined by Icon's size prop + padding, or set explicitly */
-  /* background-color might not be needed if the Icon itself has a background or is just an outline */
-  /* border-radius also might be part of Icon's container if it has one, or applied here */
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: var(--static-space-12, 12px); /* Add some padding around the icon */
-  /* The Icon component itself will define its color via onBackground prop */
-  /* Removed font-size, font-weight, color as they were for text placeholder */
-  margin-bottom: var(--static-space-16, 16px); /* Spacing for mobile */
+  padding: var(--static-space-12, 12px);
+  /* Example: add a themed background if desired, Icon itself is colored via props */
+  /* background-color: var(--surface-neutral-subtle, #f8f9fa); */
+  /* border-radius: var(--radius-m, 8px); */
+  margin-bottom: var(--static-space-16, 16px);
+  transition: background-color 0.3s ease; /* Added for theme transitions if background is used */
 }
 
 @media (min-width: 768px) {
   .iconArea {
     margin-bottom: 0;
-    margin-right: var(--static-space-32, 32px); /* Spacing for desktop */
-    /* Potentially add explicit width/height here if Icon doesn't size container */
-    /* e.g., width: 96px; height: 96px; to ensure consistent size for xl icon + padding */
+    margin-right: var(--static-space-32, 32px);
   }
 }
 
 .contentArea {
   display: flex;
   flex-direction: column;
-  gap: var(--static-space-12, 12px); /* Gap between title, value prop, deliverables */
+  gap: var(--static-space-12, 12px);
   flex-grow: 1;
 }
 
@@ -60,21 +58,19 @@
   margin-top: var(--static-space-8, 8px);
   display: flex;
   flex-direction: column;
-  gap: var(--static-space-8, 8px); /* Gap between list items */
+  gap: var(--static-space-8, 8px);
 }
 
 .deliverableItem {
   display: flex;
-  align-items: flex-start; /* Align icon with top of text */
-  gap: var(--static-space-12, 12px); /* Increased gap for icon */
-  /* Font-size and color will be handled by the Text component inside */
+  align-items: flex-start;
+  gap: var(--static-space-12, 12px);
 }
 
 .deliverableIcon {
-  /* The Icon component itself will handle its color via onBackground prop */
-  /* Adjust margin if needed to align with text, Icon size 's' is used */
-  margin-top: var(--static-space-2, 2px); /* Small adjustment for alignment */
-  flex-shrink: 0; /* Prevent icon from shrinking */
+  margin-top: var(--static-space-2, 2px);
+  flex-shrink: 0;
+  /* The Icon component handles its own color transition if its 'onBackground' prop results in a CSS var */
 }
 
 /* Styles for scroll animations - can be activated via JS */

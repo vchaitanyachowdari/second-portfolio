@@ -7,7 +7,11 @@
   border: 1px solid var(--border-neutral-alpha-medium, #eee); /* Assuming once-ui token or default */
   border-radius: var(--radius-m, 8px); /* Assuming once-ui token or default */
   box-shadow: var(--shadow-s, 0 2px 4px rgba(0,0,0,0.05)); /* Assuming once-ui token or default */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background-color 0.3s ease, /* Added for theme transitions */
+    border-color 0.3s ease;    /* Added for theme transitions */
   height: 100%; /* Ensure cards in a grid row have the same height */
 }
 
@@ -28,6 +32,7 @@
   font-weight: var(--font-weight-bold, bold);
   color: var(--text-on-neutral-default, #555); /* Assuming once-ui token or default */
   margin-bottom: var(--static-space-8, 8px);
+  transition: background-color 0.3s ease, color 0.3s ease; /* Added for theme transitions */
 }
 
 /* Styles for scroll animations - can be activated via JS */
