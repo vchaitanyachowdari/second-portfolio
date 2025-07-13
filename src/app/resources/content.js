@@ -489,7 +489,7 @@ const tools = {
 /**
  * @typedef {Object} Testimonial
  * @property {string} name
- * @property {string} string
+ * @property {string} title
  * @property {string} company
  * @property {string} image
  * @property {string} quote
