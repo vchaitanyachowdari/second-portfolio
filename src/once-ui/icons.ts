@@ -28,6 +28,7 @@ import {
   HiOutlineDocument,
   HiOutlineCodeBracket,
   HiOutlineCog,
+  HiOutlineShoppingBag,
 } from "react-icons/hi2";
 
 import {
@@ -79,6 +80,7 @@ export const iconLibrary: Record<string, IconType> = {
   document: HiOutlineDocument,
   code: HiOutlineCodeBracket,
   settings: HiOutlineCog,
+  shoppingBag: HiOutlineShoppingBag,
 };
 
 export type IconLibrary = typeof iconLibrary;

@@ -469,6 +469,13 @@ const resources = {
   description: `Useful resources and tools curated by ${person.name}`,
 };
 
+const store = {
+  path: "/store",
+  label: "Store",
+  title: `Store – ${person.name}`,
+  description: `Products and services offered by ${person.name}`,
+};
+
 // const resourcePages = [ ... ]; // This array is no longer used by the Resource page.
 // Content from here should be migrated to individual .mdx files in src/app/resource/posts/ if desired.
 
@@ -506,6 +513,7 @@ export {
   work,
   gallery,
   resources,
+  store,
   // resourcePages, // No longer exporting as it's not used by the new Resource page design
   testimonials,
 };

@@ -10,6 +10,7 @@ const routes = {
   "/resource": true,
   "/tech-stack": true,
   "/services": true,
+  "/store": true,
 };
 
 // Enable password protection on selected routes
