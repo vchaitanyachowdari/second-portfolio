@@ -11,6 +11,7 @@ const routes = {
   "/tech-stack": true,
   "/services": true,
   "/store": true,
+  "/tools": true,
 };
 
 // Enable password protection on selected routes

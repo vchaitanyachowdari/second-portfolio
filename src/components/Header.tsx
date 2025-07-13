@@ -7,7 +7,7 @@ import { Fade, Flex, Line, ToggleButton } from "@/once-ui/components";
 import styles from "@/components/Header.module.scss";
 
 import { routes, display } from "@/app/resources";
-import { person, about, resources, blog, work, gallery, techStack, services, store } from "@/app/resources/content";
+import { person, about, resources, blog, work, gallery, techStack, services, store, tools } from "@/app/resources/content";
 import { ThemeToggle } from "./ThemeToggle";
 
 type TimeDisplayProps = {
@@ -212,6 +212,23 @@ export const Header = () => {
                     prefixIcon="shoppingBag"
                     href="/store"
                     selected={pathname.startsWith("/store")}
+                  />
+                </>
+              )}
+              {routes["/tools"] && tools && (
+                <>
+                  <ToggleButton
+                    className="s-flex-hide"
+                    prefixIcon="wrenchScrewdriver"
+                    href="/tools"
+                    label={tools.label}
+                    selected={pathname.startsWith("/tools")}
+                  />
+                  <ToggleButton
+                    className="s-flex-show"
+                    prefixIcon="wrenchScrewdriver"
+                    href="/tools"
+                    selected={pathname.startsWith("/tools")}
                   />
                 </>
               )}

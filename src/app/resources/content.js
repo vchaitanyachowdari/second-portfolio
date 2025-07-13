@@ -476,13 +476,20 @@ const store = {
   description: `Products and services offered by ${person.name}`,
 };
 
+const tools = {
+  path: "/tools",
+  label: "Tools",
+  title: `Tools – ${person.name}`,
+  description: `Custom-built tools by ${person.name}`,
+};
+
 // const resourcePages = [ ... ]; // This array is no longer used by the Resource page.
 // Content from here should be migrated to individual .mdx files in src/app/resource/posts/ if desired.
 
 /**
  * @typedef {Object} Testimonial
  * @property {string} name
- * @property {string} title
+ * @property {string} string
  * @property {string} company
  * @property {string} image
  * @property {string} quote
@@ -514,6 +521,8 @@ export {
   gallery,
   resources,
   store,
+  tools,
   // resourcePages, // No longer exporting as it's not used by the new Resource page design
   testimonials,
 };
+

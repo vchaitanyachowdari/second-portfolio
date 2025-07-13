@@ -29,6 +29,7 @@ import {
   HiOutlineCodeBracket,
   HiOutlineCog,
   HiOutlineShoppingBag,
+  HiOutlineWrenchScrewdriver,
 } from "react-icons/hi2";
 
 import {
@@ -81,6 +82,7 @@ export const iconLibrary: Record<string, IconType> = {
   code: HiOutlineCodeBracket,
   settings: HiOutlineCog,
   shoppingBag: HiOutlineShoppingBag,
+  wrenchScrewdriver: HiOutlineWrenchScrewdriver,
 };
 
 export type IconLibrary = typeof iconLibrary;

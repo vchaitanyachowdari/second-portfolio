@@ -1,0 +1,26 @@
+[
+  {
+    "id": "tool-1",
+    "name": "AI Content Generator",
+    "description": "A custom-built AI tool that generates high-quality content for blogs, social media, and marketing materials based on your input.",
+    "link": "https://example.com/ai-content-generator"
+  },
+  {
+    "id": "tool-2",
+    "name": "Automated SEO Analyzer",
+    "description": "Analyze your website's SEO performance, identify keywords, and get actionable insights to improve your search engine rankings.",
+    "link": "https://example.com/seo-analyzer"
+  },
+  {
+    "id": "tool-3",
+    "name": "Social Media Scheduler",
+    "description": "Plan, schedule, and automate your social media posts across multiple platforms with ease.",
+    "link": "https://example.com/social-media-scheduler"
+  },
+  {
+    "id": "tool-4",
+    "name": "Image Resizer & Optimizer",
+    "description": "Quickly resize and optimize images for web and mobile, reducing file sizes without compromising quality.",
+    "link": "https://example.com/image-optimizer"
+  }
+]
