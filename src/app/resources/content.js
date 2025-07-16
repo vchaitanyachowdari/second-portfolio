@@ -134,7 +134,7 @@ const about = {
       },
       {
         company: "EventureX",
-        timeframe: "2025 - Present",
+        timeframe: "Jan 2025 - Jun 2025",
         role: "Founder",
         achievements: [
           <>
