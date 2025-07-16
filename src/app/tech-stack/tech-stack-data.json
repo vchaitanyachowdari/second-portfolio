@@ -1,33 +1,5 @@
 [
   {
-    "appName": "React.js",
-    "category": "Frontend Framework",
-    "type": "Free/Open Source",
-    "description": "A JavaScript library for building user interfaces. Known for its declarative views, component-based architecture, and efficiency.",
-    "usage": "Used for building interactive and dynamic single-page applications.",
-    "documentationLinks": {
-      "official": "https://react.dev/docs/getting-started",
-      "communityTutorials": "https://www.youtube.com/c/freecodecamp/search?query=react"
-    },
-    "installationSetup": "npm install react react-dom",
-    "selfHostedOption": "N/A (library, not a self-hostable application)",
-    "integrationExamples": ["Integration with Redux for state management", "Using React Router for navigation"]
-  },
-  {
-    "appName": "Node.js",
-    "category": "Backend Runtime Environment",
-    "type": "Free/Open Source",
-    "description": "An open-source, cross-platform JavaScript runtime environment that executes JavaScript code outside a web browser.",
-    "usage": "Used for building scalable network applications, APIs, and microservices.",
-    "documentationLinks": {
-      "official": "https://nodejs.org/docs/latest/api/",
-      "communityTutorials": "https://www.w3schools.com/nodejs/"
-    },
-    "installationSetup": "Download installer from nodejs.org or use nvm",
-    "selfHostedOption": "Yes, typically deployed on servers (e.g., EC2, DigitalOcean)",
-    "integrationExamples": ["Building RESTful APIs with Express.js", "Real-time applications with Socket.IO"]
-  },
-  {
     "appName": "AWS (Amazon Web Services)",
     "category": "Cloud Platform",
     "type": "Subscription-Based",
@@ -42,30 +14,185 @@
     "costManagementStrategies": ["Using reserved instances", "Spot instances", "Cost Explorer"]
   },
   {
-    "appName": "Figma",
-    "category": "Design & Prototyping",
-    "type": "Subscription-Based (with free tier)",
-    "description": "A collaborative web-based UI/UX design application.",
-    "usage": "Wireframing, prototyping, user interface design, design system creation.",
+    "appName": "Visual Studio Code (VS Code) with AI Extensions",
+    "category": "Code Editor",
+    "type": "Free/Open Source (MIT License for 'Code - OSS')",
+    "description": "While VS Code itself is a general-purpose editor, Microsoft has committed to making it an 'Open Source AI Editor.' This involves open-sourcing components of GitHub Copilot Chat and integrating AI features directly into the core, alongside a rich extension ecosystem for AI capabilities.",
+    "usage": "AI-powered code completion, code generation from natural language prompts, refactoring suggestions, bug fixing, test generation, code explanation, and intelligent chat assistants. These features significantly boost developer productivity across various programming languages.",
     "documentationLinks": {
-      "official": "https://help.figma.com/hc/en-us"
+      "official": "https://code.visualstudio.com/blogs/2025/05/19/openSourceAIEditor",
+      "AI features overview": "https://code.visualstudio.com/"
     },
-    "installationSetup": "Web-based, desktop app available",
-    "selfHostedOption": "No (SaaS)",
-    "collaborationFeatures": ["Real-time collaboration", "Version history", "Commenting"]
+    "installationSetup": "Download installer for Windows, macOS, Linux. AI features are enabled through built-in capabilities or extensions (some of which are open-source or have open-source components).",
+    "selfHostedOption": "Yes (via 'code-server' for self-hosting the editor in a browser, where you can then install AI extensions. As AI features are refactored into 'Code - OSS', they will also be available for self-hosted instances of VS Code).",
+    "integrationExamples": [
+      "**GitHub Copilot Chat (upcoming open-source components):** AI assistant for chat, code generation, and understanding.",
+      "**IntelliCode:** AI-assisted code completion (whole-line completions) and context-aware suggestions.",
+      "**Agent Mode:** For complex, multi-step tasks like reading codebase, suggesting edits, running commands, and fixing test failures.",
+      "**Next edit suggestions:** Predicts your next move and recommends changes based on current edits.",
+      "Integration with various LLMs (Claude Sonnet, Azure, Anthropic, Google, Ollama, OpenAI) via extensions or built-in functionality."
+    ]
   },
   {
-    "appName": "Visual Studio Code",
-    "category": "Integrated Development Environment (IDE) / Code Editor",
-    "type": "Open-Source (MIT License)",
-    "description": "A lightweight but powerful source code editor that runs on your desktop and is available for Windows, macOS, and Linux. It comes with built-in support for JavaScript, TypeScript and Node.js and has a rich ecosystem of extensions for other languages and runtimes.",
-    "usage": "Web development (Frontend & Backend), Mobile development, Data Science, Cloud development, Scripting, General-purpose code editing.",
+    "appName": "VSCodium with AI Extensions (e.g., Codeium, Tabnine)",
+    "category": "Code Editor",
+    "type": "Free/Open Source (MIT License)",
+    "description": "A 100% open-source binary distribution of Microsoft's VS Code, offering a privacy-respecting alternative. It supports the same extension API as VS Code, allowing it to integrate with various open-source or free-tier AI coding assistants.",
+    "usage": "AI-powered code completion, chat assistance, and generation. Developers can choose from a range of AI extensions to tailor their experience without proprietary telemetry.",
     "documentationLinks": {
-      "official": "https://code.visualstudio.com/docs"
+      "official": "https://vscodium.com/#docs",
+      "Codeium Docs": "https://docs.codeium.com/"
     },
-    "installationSetup": "Downloadable installer for Windows, macOS, Linux (deb/rpm/tar.gz), available via package managers.",
-    "selfHostedOption": "Not applicable (desktop application), but extensions and settings can be synced via cloud accounts.",
-    "collaborationFeatures": ["Live Share extension for real-time collaborative editing and debugging", "Integrated Git version control", "Commenting on code changes (via Git/PRs)"]
+    "installationSetup": "Download VSCodium installers. Install AI extensions from the Open VSX Registry or by manually adding them.",
+    "selfHostedOption": "Yes (VSCodium can be self-hosted via 'code-server' and then extended with AI plugins).",
+    "integrationExamples": [
+      "**Codeium:** Free AI code completion and chat assistant for multiple languages.",
+      "**Tabnine (Basic/Free tier):** Context-aware code completions. (Note: Tabnine also has proprietary models and paid tiers).",
+      "Integration with other open-source LLM plugins available for VS Code/VSCodium."
+    ]
+  },
+  {
+    "appName": "Refact.ai (Open-Source AI Agent & Plugin)",
+    "category": "Code Editor",
+    "type": "Open-Source (Free, with paid enterprise options)",
+    "description": "An open-source AI Agent, code generator, and chat plugin primarily for JetBrains IDEs, but with growing support for other editors. It focuses on end-to-end engineering tasks, code understanding, and integration with various tools and databases.",
+    "usage": "Unlimited accurate auto-completion, in-IDE chat for code-related questions, code generation from natural language, code refactoring, unit test generation, and integration with tools like Git, databases, Docker, and shell commands. Can run on multiple LLMs.",
+    "documentationLinks": {
+      "official": "https://refact.ai/docs"
+    },
+    "installationSetup": "Install as an IDE plugin (JetBrains Marketplace, VS Code Marketplace). Can be deployed on-premise for enterprise users.",
+    "selfHostedOption": "Yes (Enterprise users can deploy Refact.ai Agent on-premise to keep data in-house).",
+    "integrationExamples": [
+      "**In-IDE Chat:** Context-aware conversations about your codebase.",
+      "**Code Generation & Refactoring:** Turn ideas into functional code, improve existing code.",
+      "**@-commands:** Control context used by the AI (e.g., `@web`, `@file`, `@definition`, `@references`).",
+      "**Bring Your Own Key (BYOK):** Use your API keys for external LLMs (Claude, GPT-4o).",
+      "Integration with Git, databases (PostgreSQL, MySQL), Pdb, Docker, shell."
+    ]
+  },
+  {
+    "appName": "Cody (from Sourcegraph)",
+    "category": "Code Editor",
+    "type": "Free/Open-Source (Community/Individual plans available, Enterprise is commercial)",
+    "description": "An AI coding assistant from Sourcegraph that aims to accelerate development in complex codebases. It provides AI chat, autocomplete, and inline edits within various IDEs, built on top of Sourcegraph's code intelligence platform.",
+    "usage": "AI chat for code questions, intelligent code completions, generating and transforming code, auto-editing, agentic chat for multi-step tasks, and generating documentation. Leverages 'whole codebase context' for more accurate results.",
+    "documentationLinks": {
+      "official": "https://sourcegraph.com/cody"
+    },
+    "installationSetup": "Install as an extension for VS Code, Visual Studio, IntelliJ, PyCharm, etc. Can be connected to Sourcegraph instances (self-hosted or cloud).",
+    "selfHostedOption": "Yes (for enterprise users who self-host Sourcegraph, Cody can leverage that self-hosted code intelligence).",
+    "integrationExamples": [
+      "**Context-aware AI:** Understands your entire codebase, not just the current file.",
+      "**Multi-IDE Support:** Works across VS Code, JetBrains IDEs, Visual Studio, Eclipse.",
+      "**Model Agnostic:** Supports various LLMs including Claude 3.5 Sonnet, GPT-4.1, Gemini 2.5 Pro.",
+      "**Auto-edit & In-line edits:** AI-powered suggestions for code modifications."
+    ]
+  },
+  {
+    "appName": "PearAI",
+    "category": "Code Editor",
+    "type": "Free (with potential for premium features/models)",
+    "description": "An AI-powered code editor designed to make software development easier. It focuses on automated code generation, bug fixing, and context-aware chat, aiming to increase developer productivity.",
+    "usage": "Automatic code generation with PearAI Agent, in-line changes and questions with PearAI Chat (context-aware), new project creation, login flows, and web project launching.",
+    "documentationLinks": {
+      "official": "https://trypear.ai/"
+    },
+    "installationSetup": "Download desktop application (currently for macOS, others planned).",
+    "selfHostedOption": "N/A (desktop application, though future features might involve self-hosted components).",
+    "integrationExamples": [
+      "**PearAI Agent:** Codes and fixes bugs automatically.",
+      "**PearAI Chat:** AI chat assistant with codebase context for accurate results.",
+      "**PearAI Router:** Automatically connects to the highest-performing AI models for coding (e.g., GPT-4o, Llama 3.1, Claude 3 Opus).",
+      "**PearAI Creator (Coming Soon):** Creates new projects from scratch with best practices.",
+      "Aims to replace multiple AI subscriptions (Copilot, Claude, ChatGPT) for coding."
+    ]
+  },
+  {
+    "appName": "Theia IDE (with Theia AI extensions)",
+    "category": "Code Editor",
+    "type": "Open-Source (EPL-2.0, MIT, Apache-2.0)",
+    "description": "An extensible open-source IDE platform that can run as a desktop application or in a web browser. With dedicated Theia AI extensions, it provides AI-powered features like chat, code completion, and terminal assistance using arbitrary LLMs.",
+    "usage": "General-purpose coding with integrated AI assistants. AI features aid in code generation, refactoring, debugging, and understanding code through natural language interactions.",
+    "documentationLinks": {
+      "official": "https://theia-ide.org/docs/",
+      "Theia AI": "https://www.theia-ide.org/ai-features/"
+    },
+    "installationSetup": "Typically deployed via Docker, npm, or compiled from source. Integrates into cloud environments or runs as a desktop app.",
+    "selfHostedOption": "Yes (can be deployed as a self-hosted cloud IDE solution, allowing full control over AI model integration and data).",
+    "integrationExamples": [
+      "**Theia AI:** Provides AI chat, code completion, and terminal assistance.",
+      "**Custom LLM Integration:** Can connect to various LLMs, enabling flexibility for teams to use their preferred models (open or proprietary).",
+      "Used as the foundation for other cloud IDE products, facilitating AI integration within those platforms."
+    ]
+  },
+  {
+    "appName": "Monaco Editor (with AI integrations)",
+    "category": "Code Editor",
+    "type": "Free/Open Source (MIT License)",
+    "description": "The code editor that powers VS Code, available as a JavaScript library for web pages. While not an AI tool itself, its extensibility makes it a popular choice for integrating AI features into custom web-based IDEs and code playgrounds.",
+    "usage": "Building custom online code editors with AI features like intelligent autocompletion, code generation, and semantic analysis. Developers can connect it to their own backend AI services or integrate existing AI libraries.",
+    "documentationLinks": {
+      "official": "https://microsoft.github.io/monaco-editor/docs/index.html"
+    },
+    "installationSetup": "NPM/Yarn package installation. AI integration requires custom development to connect to LLMs or AI services.",
+    "selfHostedOption": "N/A (it's a client-side JavaScript library that runs as part of your self-hosted web application, allowing you to control the backend AI services).",
+    "integrationExamples": [
+      "Integration with **Language Server Protocol (LSP)** for intelligent code features, which can be powered by AI models.",
+      "Custom extensions to connect to **OpenAI, Hugging Face models**, or self-hosted LLMs for code generation and analysis.",
+      "Used in tools like GitHub Codespaces, which offer AI capabilities on top of Monaco."
+    ]
+  },
+  {
+    "appName": "CodeT5",
+    "category": "Code Editor",
+    "type": "Open-Source (Apache License 2.0)",
+    "description": "A family of open-source Code Transformer models (based on Google's T5) designed for code-related tasks. While not an editor, it's a foundational AI model that can be integrated into code editors for AI-powered code generation.",
+    "usage": "Converting natural language to code, code completion, code summarization, and code translation. Developers can fine-tune and integrate CodeT5 into custom tools or editor extensions to provide intelligent coding assistance.",
+    "documentationLinks": {
+      "official": "https://github.com/salesforce/CodeT5"
+    },
+    "installationSetup": "Python library installation (e.g., via Hugging Face Transformers). Requires a development environment capable of running large transformer models.",
+    "selfHostedOption": "Yes (the model itself can be downloaded and run on your own servers or local machines with sufficient resources).",
+    "integrationExamples": [
+      "Used by researchers and developers to build custom AI coding assistants.",
+      "Can be integrated into IDEs via custom plugins that send code context to a CodeT5 inference server.",
+      "Foundation for natural language to SQL/code generation tools."
+    ]
+  },
+  {
+    "appName": "CodeGeeX",
+    "category": "Code Editor",
+    "type": "Open-Source (Apache License 2.0)",
+    "description": "An open-source multilingual code generation model based on a large transformer. It also offers a VS Code extension that provides AI-powered code completion and translation.",
+    "usage": "Generating code from natural language descriptions, code completion, translating code between different programming languages, and explaining code snippets.",
+    "documentationLinks": {
+      "official": "https://github.com/THUDM/CodeGeeX"
+    },
+    "installationSetup": "Model can be downloaded and run; VS Code extension available from marketplace.",
+    "selfHostedOption": "Yes (the model can be self-hosted for inference; the VS Code extension connects to an inference server, which can be self-hosted).",
+    "integrationExamples": [
+      "VS Code extension provides code completion and generation.",
+      "Can be used for code summarization and translation tasks.",
+      "Supports various languages including Python, C++, Java, JavaScript, Go, etc."
+    ]
+  },
+  {
+    "appName": "OpenRewrite (with AI Agents)",
+    "category": "Code Editor",
+    "type": "Open-Source (Apache License 2.0)",
+    "description": "An open-source automated refactoring framework. While not an editor itself, it's a powerful tool that, when paired with AI agents, can perform safe, deterministic code transformations for modernization, refactoring, and security remediation across large codebases.",
+    "usage": "Automated code refactoring, dependency upgrades, security vulnerability patching, architecture standard enforcement, and large-scale code modernization. AI agents can use OpenRewrite's 'recipes' as tools to execute precise, context-aware changes.",
+    "documentationLinks": {
+      "official": "https://docs.openrewrite.org/"
+    },
+    "installationSetup": "Integrates into build tools (Maven, Gradle), CI/CD pipelines. AI agent integration requires setup with an LLM and tool-calling interfaces (e.g., OpenAI Function Calling).",
+    "selfHostedOption": "Yes (the framework runs locally or on your build servers, allowing full control over data and execution).",
+    "integrationExamples": [
+      "AI agents invoking OpenRewrite recipes for targeted refactoring tasks.",
+      "Automated Java version upgrades (e.g., to Java 21).",
+      "Fixing security vulnerabilities in dependencies.",
+      "Enforcing consistent coding patterns and removing deprecated APIs."
+    ]
   },
   {
     "appName": "GitLab Community Edition (CE)",
@@ -94,6 +221,158 @@
     "collaborationFeatures": ["Real-time collaborative editing of documents", "Shared folders and files", "Commenting", "Video conferencing (Talk app)", "Activity streams"]
   },
   {
+    "appName": "Nextcloud Hub",
+    "category": "Cloud Storage & Collaboration",
+    "type": "Free/Open Source (AGPLv3 for Community Edition, Enterprise plans available)",
+    "description": "The most popular self-hosted content collaboration platform, offering file sync and share, real-time document collaboration (with Nextcloud Office), video calls (Talk), calendar, contacts (Groupware), and more. It provides full data control and privacy.",
+    "usage": "Secure file storage, sharing, and synchronization across devices; real-time co-editing of documents, spreadsheets, and presentations; private audio/video conferencing and chat; team project management; email and calendar integration; workflow automation.",
+    "documentationLinks": {
+      "official": "https://nextcloud.com/docs/",
+      "gettingStarted": "https://nextcloud.com/install/"
+    },
+    "installationSetup": "Self-hosted on your own server (Linux with Apache/Nginx, PHP, database like MySQL/PostgreSQL). Also available via Docker, Snap, or pre-built appliances (e.g., Nextcloud Pi).",
+    "selfHostedOption": "Yes (core offering is designed for self-hosting).",
+    "integrationExamples": [
+      "**Nextcloud Files:** Core file sync and share with versioning, access control, and public link sharing.",
+      "**Nextcloud Office:** Real-time collaborative editing of ODF and Microsoft Office documents, powered by Collabora Online or ONLYOFFICE.",
+      "**Nextcloud Talk:** On-premise video conferencing and chat.",
+      "**Nextcloud Groupware:** Calendar, Contacts, and Mail (via Roundcube or integration with other mail servers).",
+      "**Nextcloud Assistant (AI):** AI-powered features for content creation, chat about data, image generation, and prompt text generation (integrated within the platform).",
+      "Integration with LDAP/Active Directory for user management.",
+      "Workflows and automation with Nextcloud Flow."
+    ]
+  },
+  {
+    "appName": "ownCloud (Infinite Scale & Community Edition)",
+    "category": "Cloud Storage & Collaboration",
+    "type": "Free/Open Source (AGPLv3 for Community Edition, Commercial for Infinite Scale/Enterprise)",
+    "description": "An open-source cloud storage and file sharing solution focused on secure data synchronization, sharing, and collaboration. ownCloud Infinite Scale is a modern, re-architected version designed for high scalability and performance, emphasizing data sovereignty.",
+    "usage": "Securely storing, syncing, and sharing files across devices; real-time document co-editing (via integrations with ONLYOFFICE, Collabora Online); robust access controls and permissions; compliance for sensitive data.",
+    "documentationLinks": {
+      "official": "https://owncloud.com/docs/",
+      "infiniteScale": "https://owncloud.com/infinite-scale/"
+    },
+    "installationSetup": "Community Edition: self-hosted on a server (Linux with Apache/Nginx, PHP, database). Infinite Scale: Docker, Kubernetes, or specific deployment instructions for its microservices architecture.",
+    "selfHostedOption": "Yes (both Community and Infinite Scale are designed for self-hosting).",
+    "integrationExamples": [
+      "**Spaces (in Infinite Scale):** Revolutionary project folder concept for seamless digital collaboration.",
+      "**Web Office Integration:** Seamless real-time co-editing with OnlyOffice, Microsoft 365, or Collabora Online.",
+      "Granular file sharing permissions with password protection and expiration dates.",
+      "Multi-factor authentication and encryption for enhanced security.",
+      "Open APIs for custom integrations."
+    ]
+  },
+  {
+    "appName": "Seafile",
+    "category": "Cloud Storage & Collaboration",
+    "type": "Free/Open Source (GPLv3 for Community Edition, Professional Edition is commercial)",
+    "description": "An open-source, high-performance file sync and share system. It focuses on reliability, efficiency, and advanced file management features, including versioning, custom file properties, and built-in collaborative docs.",
+    "usage": "Fast and secure file synchronization across devices; flexible file sharing with granular permissions; online viewing and editing of various file formats; built-in real-time co-editing of documents (SeaDoc); team knowledge management via Wiki.",
+    "documentationLinks": {
+      "official": "https://www.seafile.com/en/help/"
+    },
+    "installationSetup": "Self-hosted on Linux server, often with Nginx/Apache. Docker images are also available.",
+    "selfHostedOption": "Yes (Community Edition is fully self-hostable).",
+    "integrationExamples": [
+      "**Extensible File Properties:** Assign custom metadata to files for better organization and search.",
+      "**Flexible File Views:** Create table, gallery, kanban, and map views based on file properties.",
+      "**AI-powered Automation:** AI automatically generates file descriptions, extracts key information, and creates tags.",
+      "**SeaDoc:** Built-in real-time co-editing with revision history and review workflows.",
+      "Collaborative Wiki for team knowledge organization.",
+      "Comprehensive security features including encryption and audit logs."
+    ]
+  },
+  {
+    "appName": "ONLYOFFICE Docs (Community Edition)",
+    "category": "Cloud Storage & Collaboration",
+    "type": "Free/Open Source (AGPLv3 for Community Edition, Commercial for Enterprise)",
+    "description": "A powerful open-source office suite that enables collaborative editing of text documents, spreadsheets, and presentations directly in the browser. It integrates with various sync & share platforms.",
+    "usage": "Real-time co-editing of DOCX, XLSX, PPTX files; robust version history; commenting, chat, and review tools; form filling; PDF viewing and conversion. Often used as the 'office' component within Nextcloud, ownCloud, Seafile, etc.",
+    "documentationLinks": {
+      "official": "https://help.onlyoffice.com/en/docs/overview.htm"
+    },
+    "installationSetup": "Self-hosted via Docker, Snap, or installation packages for Linux. Integrates with document management systems.",
+    "selfHostedOption": "Yes (Community Edition is fully self-hostable).",
+    "integrationExamples": [
+      "Integrated into Nextcloud, ownCloud, Seafile, Confluence, Alfresco, Moodle, and many other platforms for native document co-editing.",
+      "API for deep integration into custom web applications.",
+      "Supports over 20 different document formats."
+    ]
+  },
+  {
+    "appName": "Collabora Online (Community Edition)",
+    "category": "Cloud Storage & Collaboration",
+    "type": "Free/Open Source (MPL-2.0, LGPL-3.0 for parts)",
+    "description": "An open-source online office suite based on LibreOffice, providing powerful collaborative editing capabilities for documents, spreadsheets, and presentations within a web browser.",
+    "usage": "Real-time co-editing for ODT, ODS, ODP, and Microsoft Office formats; rich document formatting; commenting; spell check. Frequently integrated with self-hosted file sync and share platforms.",
+    "documentationLinks": {
+      "official": "https://www.collaboraoffice.com/learn/"
+    },
+    "installationSetup": "Self-hosted via Docker or traditional server installation (Linux). Requires an integrating platform (e.g., Nextcloud, ownCloud, Seafile).",
+    "selfHostedOption": "Yes (Community Edition is fully self-hostable).",
+    "integrationExamples": [
+      "Seamlessly integrates with Nextcloud, ownCloud, and other cloud collaboration platforms for collaborative editing.",
+      "Provides a consistent user experience for those familiar with LibreOffice.",
+      "Supports a wide range of document formats."
+    ]
+  },
+  {
+    "appName": "CryptPad",
+    "category": "Cloud Storage & Collaboration",
+    "type": "Free/Open Source (AGPLv3)",
+    "description": "A privacy-focused, zero-knowledge collaborative editor and sharing platform. All content is encrypted in the user's browser *before* it reaches the server, ensuring that even the server administrator cannot access your documents.",
+    "usage": "Collaborative text documents, spreadsheets, rich text, code (Markdown), presentations, polls, whiteboards, and kanban boards. Ideal for sensitive information sharing and collaboration where maximum privacy is required.",
+    "documentationLinks": {
+      "official": "https://docs.cryptpad.fr/"
+    },
+    "installationSetup": "Self-hosted via Node.js server. Docker images are available.",
+    "selfHostedOption": "Yes (designed for self-hosting for complete control over privacy).",
+    "integrationExamples": [
+      "Real-time collaborative editing for various document types.",
+      "End-to-end encryption by default for all content.",
+      "File storage for encrypted content.",
+      "Share links with expiration dates and password protection."
+    ]
+  },
+  {
+    "appName": "FileOrbis AI Enabler (with Sync & Share)",
+    "category": "Cloud Storage & Collaboration",
+    "type": "Commercial (with a strong open-source-like self-hostable component for data control)",
+    "description": "A solution that turns local data into intelligent, secure, conversational AI, with real-time synchronization and content-aware file sharing. It focuses on providing enterprise-level security and data governance alongside collaboration.",
+    "usage": "Secure file sync and share with real-time updates, co-editing, version management, and granular permission controls. AI Enabler turns your data into a conversational AI, allowing users to interact with their documents securely. Ideal for organizations with strict compliance and data security needs.",
+    "documentationLinks": {
+      "official": "https://www.fileorbis.com/content-aware-file-sharing/sync-and-share/"
+    },
+    "installationSetup": "Deployed on-premises or in a hybrid setup. Integration with existing file servers and Microsoft 365. Contact vendor for specific setup.",
+    "selfHostedOption": "Yes (designed for on-premise or hybrid deployment, giving full control over data).",
+    "integrationExamples": [
+      "**AI Data Delivery Hub:** Turn existing file servers into 'next-gen' file servers with AI capabilities.",
+      "**Content-Aware File Sharing:** Define policies and approvals based on file content and metadata.",
+      "**Real-time Sync & Co-edit:** Seamless co-editing of documents (e.g., MS365 integration) with real-time syncing.",
+      "**File Version Management:** Comprehensive version control with rollback options.",
+      "**AI Enabler:** Conversational AI to interact with your data securely, for intelligent search and insights.",
+      "Integrates with Microsoft 365, Smart SFTP, and Edge Servers."
+    ]
+  },
+  {
+    "appName": "Zimbra Collaboration",
+    "category": "Cloud Storage & Collaboration",
+    "type": "Free/Open Source (Zimbra Public License for Open Source Edition, Commercial for Network Edition)",
+    "description": "A comprehensive open-source collaboration suite providing email, calendar, contacts, tasks, shared documents, and chat. It offers a self-hostable alternative to Microsoft Exchange or Google Workspace.",
+    "usage": "Email and webmail services, shared calendars for team scheduling, centralized contact management, document storage and sharing (not real-time co-editing out of the box, but can integrate), task management, and chat for team communication.",
+    "documentationLinks": {
+      "official": "https://zimbra.github.io/documentation/"
+    },
+    "installationSetup": "Self-hosted on Linux servers. Offers a robust installer.",
+    "selfHostedOption": "Yes (Open Source Edition is fully self-hostable).",
+    "integrationExamples": [
+      "Integrated webmail client with advanced features.",
+      "Shared calendars and address books for team collaboration.",
+      "Integration with external storage (e.g., S3) for document attachments.",
+      "Extensible architecture for plugins and custom integrations."
+    ]
+  },
+  {
     "appName": "Mattermost",
     "category": "Team Communication / ChatOps",
     "type": "Open-Source (MIT License)",
@@ -105,6 +384,137 @@
     "installationSetup": "Docker, Kubernetes, manual installation on Linux servers (Ubuntu, Debian, CentOS), pre-built images for cloud platforms.",
     "selfHostedOption": "Yes (recommended for full control and privacy)",
     "collaborationFeatures": ["Public and private channels", "Direct messages", "File sharing", "Searchable history", "Integrations (webhooks, bots, plugins)", "Voice/Video calls (via plugins)"]
+  },
+  {
+    "appName": "Mattermost",
+    "category": "Team Communication / ChatOps",
+    "type": "Free/Open Source (MIT License for Team Edition, Commercial for Enterprise)",
+    "description": "An open-source, self-hostable team collaboration platform designed as a secure alternative to Slack. It's highly customizable and built for developers, enabling deep integrations for ChatOps workflows.",
+    "usage": "Team chat with public/private channels, direct messages, file sharing, custom emojis. Strong focus on DevOps and technical teams for integrating alerts, running commands, and automating workflows directly within chat. Supports CI/CD notifications, incident response, and information retrieval via bots.",
+    "documentationLinks": {
+      "official": "https://docs.mattermost.com/"
+    },
+    "installationSetup": "Self-hosted on Linux servers (Ubuntu, Debian, CentOS, RHEL), Docker, or Kubernetes. Various deployment options are available.",
+    "selfHostedOption": "Yes (core offering is designed for self-hosting).",
+    "integrationExamples": [
+      "**Rich ChatOps Integrations:** Webhooks, slash commands, custom bots (e.g., using Hubot or custom scripts) to interact with CI/CD pipelines (Jenkins, GitLab CI), monitoring tools (Grafana, Prometheus), ticketing systems (Jira), and cloud platforms.",
+      "**Plugins Marketplace:** Extensible with plugins for various integrations and custom features.",
+      "**Converse (AI Bot):** Mattermost has developed an AI bot framework (Converse) to integrate with LLMs for AI-powered summaries, question answering, and code assistance directly in channels.",
+      "**Customizable UI and Branding:** Allows organizations to tailor the platform to their specific needs and brand."
+    ]
+  },
+  {
+    "appName": "Rocket.Chat",
+    "category": "Team Communication / ChatOps",
+    "type": "Free/Open Source (MIT License for Community, Commercial for Enterprise)",
+    "description": "A highly customizable, open-source team communication platform that offers full control over data privacy and security. It's a popular choice for organizations needing an on-premise solution with extensive ChatOps capabilities.",
+    "usage": "Real-time team chat, audio/video conferencing, screen sharing, file sharing. Supports omnichannel customer service (via Livechat), integrates with existing systems for notifications, and allows for custom bot development for ChatOps automation.",
+    "documentationLinks": {
+      "official": "https://docs.rocket.chat/"
+    },
+    "installationSetup": "Self-hosted on Linux (Snap, Docker, manual installation). Also offers cloud hosting.",
+    "selfHostedOption": "Yes (core offering is designed for self-hosting).",
+    "integrationExamples": [
+      "**Integrations Hub:** Connects with popular tools like GitHub, GitLab, Jira, Jenkins, Trello, and more for notifications and command execution.",
+      "**Custom Bots:** Supports custom bot development using JavaScript (Hubot compatible) for automating tasks, triggering deployments, retrieving information, and managing incidents directly from chat.",
+      "**Livechat:** Built-in live chat for customer support, integrating with CRM systems.",
+      "**AI Integration:** Can be extended with custom integrations to AI platforms and LLMs for features like summarization, sentiment analysis, and intelligent routing."
+    ]
+  },
+  {
+    "appName": "Zulip",
+    "category": "Team Communication / ChatOps",
+    "type": "Free/Open Source (Apache License 2.0 for Server, MIT for Clients)",
+    "description": "An open-source team collaboration tool known for its unique threading model, which organizes conversations into topics within streams. This structure makes it highly effective for managing multiple, concurrent discussions and for ChatOps.",
+    "usage": "Structured team communication through threaded conversations, making it easy to follow specific topics. Ideal for developer teams, open-source projects, and organizations with high information flow, as it prevents message overload and provides clear context for ChatOps actions.",
+    "documentationLinks": {
+      "official": "https://zulip.com/help/"
+    },
+    "installationSetup": "Self-hosted on Linux servers (Ubuntu, Debian, CentOS, RHEL) via a straightforward installer script. Docker is also an option.",
+    "selfHostedOption": "Yes (core offering is designed for self-hosting).",
+    "integrationExamples": [
+      "**Bots and Integrations:** Comes with a wide range of native integrations (GitHub, GitLab, Jira, Jenkins, Sentry, PagerDuty) and a flexible API for building custom bots and webhooks.",
+      "**Threaded Conversations:** Its unique topic-based threading provides clear context for ChatOps commands and notifications, making it easier to track the lifecycle of an event or task.",
+      "**Incoming Webhooks:** Easily receive notifications from external services into specific streams and topics.",
+      "**Out-of-the-box ChatOps:** Many integrations allow direct actions via slash commands.",
+      "**AI Integration:** While not built-in, its open API and bot framework allow for custom AI integrations to summarize topics, answer questions, or provide contextually relevant information from knowledge bases."
+    ]
+  },
+  {
+    "appName": "Element (Matrix Client)",
+    "category": "Team Communication / ChatOps",
+    "type": "Free/Open Source (Apache License 2.0)",
+    "description": "Element is the most popular client for the Matrix open network, a decentralized, open standard for secure, real-time communication. It offers strong encryption and data sovereignty, making it suitable for privacy-conscious organizations.",
+    "usage": "Secure end-to-end encrypted team chat, voice and video calls, file sharing. Supports bridging to other communication networks (Slack, IRC, Telegram). Its decentralized nature and extensible API are well-suited for building custom ChatOps integrations with strong security.",
+    "documentationLinks": {
+      "official": "https://element.io/help",
+      "matrix": "https://matrix.org/docs/guides/matrix-basics"
+    },
+    "installationSetup": "Element is a client; the core is the Matrix homeserver (Synapse or Dendrite). Homeservers can be self-hosted on various Linux distributions or via Docker.",
+    "selfHostedOption": "Yes (you can self-host your own Matrix homeserver, giving you full control over your data).",
+    "integrationExamples": [
+      "**Matrix Bots:** Build custom bots using the Matrix API (e.g., matrix-bot-sdk) to integrate with CI/CD tools, monitoring systems, and other services for ChatOps.",
+      "**Widgets:** Embed web-based tools and dashboards directly into Matrix rooms.",
+      "**Bridges:** Connect to other chat platforms, enabling cross-platform ChatOps.",
+      "**Encryption:** End-to-end encryption for all communications, ensuring secure ChatOps interactions for sensitive commands.",
+      "**AI Integration:** The open nature of Matrix allows for connecting custom AI agents or LLMs to rooms for tasks like content moderation, summarization, or intelligent responses."
+    ]
+  },
+  {
+    "appName": "Botpress",
+    "category": "Team Communication / ChatOps",
+    "type": "Free/Open Source (AGPL-3.0, Commercial for Enterprise)",
+    "description": "An open-source conversational AI platform for building intelligent chatbots. While not a communication platform itself, it's a key tool for creating the 'bot' component of a ChatOps workflow, enabling advanced natural language understanding (NLU) and automation.",
+    "usage": "Designing and deploying AI-driven chatbots that can understand natural language, automate tasks, provide information, and integrate with various messaging services (Slack, Teams, Discord, etc.) to power ChatOps commands and responses.",
+    "documentationLinks": {
+      "official": "https://botpress.com/docs"
+    },
+    "installationSetup": "Self-hosted via Docker. Cloud options are also available.",
+    "selfHostedOption": "Yes (the core platform can be self-hosted).",
+    "integrationExamples": [
+      "**Visual Conversation Builder:** Design complex bot flows without extensive coding.",
+      "**NLU Support:** Integrates with various NLU libraries to understand user intent from chat messages.",
+      "**Actions & Integrations:** Create custom actions in JavaScript to connect to external APIs (e.g., CI/CD triggers, monitoring dashboards, ticketing systems).",
+      "**Multi-channel Deployment:** Deploy bots to Mattermost, Rocket.Chat, Slack, Microsoft Teams, Discord, etc., transforming them into ChatOps command centers.",
+      "**AI Features:** Built-in AI capabilities for autonomous nodes and AI transitions to create more natural and intelligent bot interactions for ChatOps."
+    ]
+  },
+  {
+    "appName": "Rasa",
+    "category": "Team Communication / ChatOps",
+    "type": "Free/Open Source (Apache License 2.0)",
+    "description": "An open-source framework for building contextual AI chatbots and assistants. Similar to Botpress, Rasa provides the underlying AI engine to create sophisticated bots that can be integrated into team communication platforms for advanced ChatOps.",
+    "usage": "Building complex conversational AI assistants that understand context, manage multi-turn conversations, and integrate with backend systems. Ideal for creating highly customized ChatOps bots that can handle intricate requests, retrieve specific data, and execute multi-step automations.",
+    "documentationLinks": {
+      "official": "https://rasa.com/docs/"
+    },
+    "installationSetup": "Python library installation via pip. Often deployed in Docker containers for production environments.",
+    "selfHostedOption": "Yes (Rasa is designed to be fully self-hostable, giving complete control over your AI models and data).",
+    "integrationExamples": [
+      "**Contextual AI:** Handles complex conversations, maintaining state and context across multiple turns.",
+      "**NLU and Dialogue Management:** Powerful capabilities for understanding user input and determining the appropriate response or action.",
+      "**Custom Actions:** Execute arbitrary Python code to connect to external systems (e.g., deployment scripts, monitoring APIs, database queries).",
+      "**Integration Channels:** Connects to messaging platforms like Slack, Microsoft Teams, Mattermost, Rocket.Chat via connectors, enabling sophisticated ChatOps bots."
+    ]
+  },
+  {
+    "appName": "LibreChat",
+    "category": "Team Communication / ChatOps",
+    "type": "Free/Open Source (MIT License)",
+    "description": "The ultimate open-source app for all your AI conversations, providing a customizable interface compatible with various AI providers. While primarily a UI for interacting with LLMs, its agent and code interpreter features have significant potential for ChatOps integration.",
+    "usage": "Facilitating multi-model AI conversations. Its 'Agents' feature (with file handling, code interpretation, and API actions) means it can be configured to act as a powerful ChatOps interface for AI-driven automation within a team. Users could hypothetically issue commands to LLMs that then execute actions via LibreChat's agent capabilities.",
+    "documentationLinks": {
+      "official": "https://www.librechat.ai/docs"
+    },
+    "installationSetup": "Self-hosted via Docker. Requires a connection to various AI models (OpenAI, Anthropic, AWS, Azure, Google, Ollama, etc.).",
+    "selfHostedOption": "Yes (fully designed for self-hosting).",
+    "integrationExamples": [
+      "**Advanced Agents:** Can perform file handling, execute code (Python, JavaScript, Go) via a secure interpreter, and make API calls.",
+      "**Multi-Model Support:** Connects to a wide range of LLMs, allowing choice for performance, cost, or data residency.",
+      "**Artifacts Generation:** Create code snippets (React, HTML), diagrams (Mermaid) directly within chat – useful for developer ChatOps.",
+      "**Search:** Search for messages, files, and code snippets within conversations.",
+      "While not a full 'team communication platform' like Mattermost, its AI capabilities make it a strong contender for the *AI bot component* of a sophisticated ChatOps setup."
+    ]
   },
   {
     "appName": "PostgreSQL",
@@ -170,6 +580,238 @@
     "installationSetup": "Docker, Debian/Ubuntu packages, SUSE/CentOS packages, virtual appliance.",
     "selfHostedOption": "Yes (community edition)",
     "collaborationFeatures": ["Task assignment and tracking", "Commenting on tasks and work packages", "Shared project wikis", "Meeting management", "Team calendars"]
+  },
+  {
+    "appName": "Taiga",
+    "category": "Project Management",
+    "type": "Free/Open Source (GNU GPL v3 for Community Edition, Commercial Cloud)",
+    "description": "An open-source, intuitive project management platform specifically designed for agile teams, supporting Scrum and Kanban methodologies. It emphasizes ease of use and team collaboration.",
+    "usage": "Scrum sprint planning, backlog management, Kanban boards, task tracking, issue management, burndown charts, and a wiki. It's well-suited for software development teams and any team adopting agile practices.",
+    "documentationLinks": {
+      "official": "https://taiga.io/support/documentation/"
+    },
+    "installationSetup": "Self-hosted using Docker. Easy to set up and maintain.",
+    "selfHostedOption": "Yes (core product is designed for self-hosting).",
+    "aiIntegrationPotential": "Taiga's open-source nature allows for custom integrations. You could develop AI extensions or external scripts that use Taiga's API to: suggest user stories, estimate task complexity based on past data, analyze team velocity to predict sprint outcomes, or generate summary reports from task descriptions using LLMs.",
+    "features": [
+      "Scrum management (backlog, sprints, user stories, epics).",
+      "Kanban boards with customizable workflows and swimlanes.",
+      "Issue tracking with configurable types and priorities.",
+      "Built-in Wiki for project documentation.",
+      "Task estimation tools.",
+      "Real-time team collaboration."
+    ]
+  },
+  {
+    "appName": "Leantime",
+    "category": "Project Management",
+    "type": "Free/Open Source (GNU GPL v3)",
+    "description": "An open-source project management system focused on lean principles, startups, and innovation. It combines idea management, project planning, and task tracking, and specifically mentions AI integration for productivity.",
+    "usage": "Idea boards for brainstorming, research matrix, milestone tracking, Kanban boards, Gantt charts, task management with subtasks and dependencies, time tracking, and retrospectives. Built with neurodivergence in mind, aiming to reduce cognitive overload with AI support.",
+    "documentationLinks": {
+      "official": "https://leantime.io/documentation/"
+    },
+    "installationSetup": "Self-hosted via Docker. Relatively easy to deploy.",
+    "selfHostedOption": "Yes (designed for self-hosting).",
+    "aiIntegrationPotential": "Leantime is explicitly building AI features. Expect capabilities like: breaking down large tasks, personalized project descriptions, automated status updates, and AI prioritization. This is one of the stronger contenders for built-in, open-source AI in project management.",
+    "features": [
+      "Idea Boards and Research Matrix for initial project phases.",
+      "Kanban, Table, and List views for tasks.",
+      "Milestone tracking and Gantt charts.",
+      "Personal dashboard for individual task management and time blocking.",
+      "AI for task breakdown, project descriptions, and status reports.",
+      "Built-in whiteboards for visual planning."
+    ]
+  },
+  {
+    "appName": "Plexo",
+    "category": "Project Management",
+    "type": "Open-Source (Apache-2.0, MIT)",
+    "description": "An innovative open-source project management platform that harnesses the power of AI to streamline software project planning and task management. Designed to be lightweight and self-hostable, focusing on autonomous task creation and seamless collaboration.",
+    "usage": "AI-powered task generation from project descriptions, intelligent suggestions for planning, active task tracking, and enhanced team synergy. Specifically built for software development teams to optimize planning and execution.",
+    "documentationLinks": {
+      "official": "https://github.com/minskylab/plexo-core"
+    },
+    "installationSetup": "Self-hosted via Docker. Requires a PostgreSQL database and an OpenAI API Key (or similar LLM API) for its AI features, and optionally GitHub OAuth.",
+    "selfHostedOption": "Yes (designed to be lightweight and self-hostable).",
+    "aiIntegrationPotential": "Plexo is *built around* AI. Its core features include: autonomous task creation (AI generates tasks from requirements), AI-powered suggestions for planning, and real-time task tracking. It's one of the few open-source PM tools explicitly designed with AI at its heart.",
+    "features": [
+      "AI-powered task generation and intelligent suggestions.",
+      "Active task tracking in real-time.",
+      "Seamless collaboration features.",
+      "Interoperability focus (aims to be a standard in project description).",
+      "Lightweight and self-hostable design."
+    ]
+  },
+  {
+    "appName": "Redmine",
+    "category": "Project Management",
+    "type": "Free/Open Source (GNU GPL v2)",
+    "description": "A flexible, web-based project management application written using the Ruby on Rails framework. It's highly customizable and supports multiple projects, offering a wide range of features for various project management needs.",
+    "usage": "Multi-project management, Gantt charts, calendar, news, documents, files, wikis, forums, time tracking, custom fields, issue tracking, and email notifications. Very versatile and can be adapted to many workflows.",
+    "documentationLinks": {
+      "official": "https://www.redmine.org/guide"
+    },
+    "installationSetup": "Self-hosted on Linux/Windows servers with Ruby, Rails, and a database (MySQL, PostgreSQL, SQLite).",
+    "selfHostedOption": "Yes (fully self-hostable).",
+    "aiIntegrationPotential": "Redmine has a robust plugin architecture. While no native AI is built-in, you can develop or integrate plugins that connect to external AI services for: sentiment analysis of forum discussions, smart issue categorization, natural language processing for task descriptions, or generating meeting summaries.",
+    "features": [
+      "Multiple projects support.",
+      "Gantt chart and calendar for visualization.",
+      "Issue tracking system with flexible roles and permissions.",
+      "Time tracking functionality.",
+      "Wikis and forums for knowledge sharing and communication.",
+      "Customizable fields, workflows, and issue statuses.",
+      "LDAP authentication support."
+    ]
+  },
+  {
+    "appName": "Kanboard",
+    "category": "Project Management",
+    "type": "Free/Open Source (MIT License)",
+    "description": "A simple and lightweight open-source Kanban project management software. It focuses on visual task management using a clean and intuitive drag-and-drop interface.",
+    "usage": "Kanban boards for visual task tracking, subtasks, attachments, comments, automatic actions (e.g., move task when status changes), and reporting. Ideal for small teams or individuals who prefer the Kanban methodology for workflow visualization.",
+    "documentationLinks": {
+      "official": "https://kanboard.org/documentation/"
+    },
+    "installationSetup": "Self-hosted on any server with PHP. Very lightweight and easy to deploy.",
+    "selfHostedOption": "Yes (fully self-hostable).",
+    "aiIntegrationPotential": "Kanboard is simple, so direct AI integration isn't a core feature. However, its plugin system and webhook support allow for external AI tools to: analyze task descriptions for keyword extraction, automate task assignments based on content, or generate simple summaries of completed tasks, triggered by workflow changes.",
+    "features": [
+      "Intuitive Kanban board interface.",
+      "Subtasks, attachments, and comments.",
+      "Automated actions based on task movements.",
+      "Swimlanes and categories for organization.",
+      "Markdown support for task descriptions.",
+      "Reporting for lead and cycle time."
+    ]
+  },
+  {
+    "appName": "Wekan",
+    "category": "Project Management",
+    "type": "Free/Open Source (MIT License)",
+    "description": "An open-source Trello-like Kanban board, offering a highly customizable and collaborative way to manage tasks and projects. It's designed to be feature-rich and support various workflows.",
+    "usage": "Drag-and-drop Kanban boards, cards with checklists, attachments, comments, due dates, labels, and swimlanes. Supports multiple boards, public sharing, and automation rules. Great for visual project management and team collaboration.",
+    "documentationLinks": {
+      "official": "https://wekan.github.io/user-documentation/"
+    },
+    "installationSetup": "Self-hosted via Docker (recommended) or manual installation. Relatively easy to set up.",
+    "selfHostedOption": "Yes (fully self-hostable).",
+    "aiIntegrationPotential": "Wekan's extensibility via webhooks and its API can be leveraged for AI integration. You could use AI to: automatically assign labels based on card content, suggest task breakdowns in checklists, provide intelligent search for cards, or trigger notifications to a ChatOps platform when an AI detects a potential bottleneck.",
+    "features": [
+      "Highly customizable Kanban boards.",
+      "Cards with full features (description, checklists, attachments, comments).",
+      "Swimlanes, labels, and custom fields.",
+      "Automation rules (similar to Trello's Power-Ups).",
+      "Public board sharing.",
+      "Webhooks for integrations."
+    ]
+  },
+  {
+    "appName": "Orangescrum",
+    "category": "Project Management",
+    "type": "Free/Open Source (Community Edition is free, Professional/Enterprise are commercial)",
+    "description": "An open-source project management software that provides a comprehensive set of features for planning, executing, and delivering projects. It aims to streamline workflows and enhance collaboration, with a focus on enterprise needs.",
+    "usage": "Project and task management, Gantt charts, Kanban boards, time tracking, resource management, invoicing, bug tracking, and daily scrum meetings. Supports agile, waterfall, and hybrid methodologies. Good for teams needing a scalable, self-hosted solution.",
+    "documentationLinks": {
+      "official": "https://www.orangescrum.com/support"
+    },
+    "installationSetup": "Self-hosted on Linux with PHP and MySQL. Docker available.",
+    "selfHostedOption": "Yes (Community Edition is self-hostable).",
+    "aiIntegrationPotential": "Orangescrum's self-hosted nature and focus on workflows make it a strong candidate for custom AI integrations. You could build plugins or use its API to: analyze project progress for early risk detection, suggest optimal resource allocation, automate report generation, or provide intelligent search and insights into project data using external LLMs.",
+    "features": [
+      "Unlimited projects and tasks.",
+      "Gantt charts and Kanban boards.",
+      "Time tracking and invoicing.",
+      "Resource management and allocation.",
+      "Bug and issue tracking.",
+      "Customizable workflows and roles.",
+      "Integrations with LDAP, SSO, Jira, GitHub (for enterprise versions)."
+    ]
+  },
+  {
+    "appName": "Vikunja",
+    "category": "Project Management",
+    "type": "Free/Open Source (AGPLv3)",
+    "description": "An open-source, self-hostable to-do app that scales to project management. It prioritizes user experience and aims to make task and project organization easy and intuitive, with a focus on privacy.",
+    "usage": "Personal task management, project organization with subprojects, task assignment, and collaboration. Supports various views including list, Gantt, table, and Kanban. Great for individuals and small teams looking for a clean, efficient way to manage tasks and projects.",
+    "documentationLinks": {
+      "official": "https://vikunja.io/docs/"
+    },
+    "installationSetup": "Self-hosted via Docker or manual installation on a server. Written in Go (backend) and Vue.js (frontend).",
+    "selfHostedOption": "Yes (fully self-hostable).",
+    "aiIntegrationPotential": "Vikunja doesn't have explicit AI features currently, but its clean API and open-source nature make it ripe for integration. You could leverage AI to: automatically categorize tasks, suggest deadlines based on task descriptions, identify potential bottlenecks by analyzing task dependencies, or provide intelligent search for tasks.",
+    "features": [
+      "Task and subtask management.",
+      "Multiple views: List, Gantt, Table, Kanban.",
+      "Project and subproject organization.",
+      "Task assignment and collaboration.",
+      "Reminders and due dates.",
+      "Calendar integration (iCal)."
+    ]
+  },
+  {
+    "appName": "Focalboard",
+    "category": "Project Management",
+    "type": "Free/Open Source (MIT License)",
+    "description": "An open-source, Trello-like task and project management tool from the Mattermost team. It helps individuals and teams organize workflows using flexible boards and cards.",
+    "usage": "Kanban boards with customizable columns and cards, task assignment, due dates, priorities, attachments, and templates. Ideal for visual project management, personal task tracking, and small team collaboration.",
+    "documentationLinks": {
+      "official": "https://www.focalboard.com/docs/"
+    },
+    "installationSetup": "Self-hosted via Docker or as a desktop application. Also integrates with Mattermost.",
+    "selfHostedOption": "Yes (fully self-hostable).",
+    "aiIntegrationPotential": "Being part of the Mattermost ecosystem, Focalboard can benefit from AI integrations developed for Mattermost (e.g., custom bots). You could build AI agents that: summarize board activities, suggest task assignments, analyze task descriptions for related knowledge base articles, or flag cards needing attention based on AI-driven criteria.",
+    "features": [
+      "Kanban boards with drag-and-drop interface.",
+      "Cards with properties, comments, and attachments.",
+      "Templates for common workflows.",
+      "Personal and shared boards.",
+      "Integration with Mattermost for unified communication.",
+      "Supports different views (board, table, calendar)."
+    ]
+  },
+  {
+    "appName": "OpenGoo / Feng Office (Community Edition)",
+    "category": "Project Management",
+    "type": "Free/Open Source (AGPLv3 for Community Edition, Commercial for Enterprise)",
+    "description": "An open-source web-based office suite and project management system. While the project has seen varying levels of activity, its community edition provides a comprehensive set of tools for collaboration and management.",
+    "usage": "Project management, task management, document management, contacts, calendar, email integration, and time tracking. Aims to be an all-in-one collaborative workspace.",
+    "documentationLinks": {
+      "official": "http://community.fengoffice.com/documentation/index.html"
+    },
+    "installationSetup": "Self-hosted on a server with PHP and MySQL.",
+    "selfHostedOption": "Yes (Community Edition is self-hostable).",
+    "aiIntegrationPotential": "Being an older, more established platform, direct AI integration is less common out-of-the-box. However, its open-source nature and APIs would allow custom development for AI features like: intelligent document search, automated task creation from emails, or basic project progress summarization.",
+    "features": [
+      "Project and task management.",
+      "Document management and version control.",
+      "Contact management.",
+      "Calendar and event scheduling.",
+      "Time tracking.",
+      "Email integration."
+    ]
+  },
+  {
+    "appName": "Phabricator (Legacy / Community Maintained)",
+    "category": "Project Management",
+    "type": "Free/Open Source (Apache License 2.0)",
+    "description": "A collection of open-source web applications that help companies build better software. While Facebook (Meta) stopped actively developing it, it remains a powerful suite for developers, with a strong community maintaining it.",
+    "usage": "Code review (Differential), task management (Maniphest), code hosting (Diffusion), auditing, chat, wiki, and more. Strong focus on software development workflows, making it excellent for engineering project management.",
+    "documentationLinks": {
+      "official": "https://secure.phabricator.com/docs/phabricator/"
+    },
+    "installationSetup": "Self-hosted on Linux servers with PHP and MySQL.",
+    "selfHostedOption": "Yes (fully self-hostable).",
+    "aiIntegrationPotential": "Similar to Redmine, Phabricator's extensibility can be used. You could integrate AI for: automated code review suggestions, intelligent bug reporting categorization, summarizing long code discussions, or identifying potential issues in code changes before review, by connecting to external AI models.",
+    "features": [
+      "Differential for code review.",
+      "Maniphest for task and bug tracking.",
+      "Diffusion for code repository Browse.",
+      "Herald for customizable automation rules.",
+      "Phriction for wiki documentation.",
+      "Conduit API for extensibility."
+    ]
   },
   {
     "appName": "Brave Browser",
