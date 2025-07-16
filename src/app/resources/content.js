@@ -83,16 +83,17 @@ const about = {
   },
   calendar: {
     display: true,
-    link: "https://form.typeform.com/to/BaPLDCSt",
+    link: "https://calendar.app.google/QeHM7DvtkaACUXKa8",
   },
   intro: {
     display: true,
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        I am an AI and automation enthusiast with over 1 year of hands-on experience across domains
+        like artificial intelligence, automation, web development, and digital marketing. My technical 
+        toolkit includes programming languages such as C, C++, Java, and Python, enabling me to 
+        build smart systems and scalable digital solutions.
       </>
     ),
   },
