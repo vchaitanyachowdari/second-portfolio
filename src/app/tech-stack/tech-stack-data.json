@@ -573,5 +573,5 @@
     "installationSetup": "Copy & paste components (Tailwind CSS project required).",
     "selfHostedOption": "Yes (component library, integrates into any web project)",
     "collaborationFeatures": ["Standard front-end development collaboration, components can be integrated and customized by teams."]
-  },
+  }
 ]
