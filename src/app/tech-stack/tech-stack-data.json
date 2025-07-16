@@ -573,5 +573,162 @@
     "installationSetup": "Copy & paste components (Tailwind CSS project required).",
     "selfHostedOption": "Yes (component library, integrates into any web project)",
     "collaborationFeatures": ["Standard front-end development collaboration, components can be integrated and customized by teams."]
+  },
+  {
+    "appName": "OpenSearch (with Vector Search/ML Capabilities)",
+    "category": "Backend Development",
+    "type": "Open-Source (Apache License 2.0)",
+    "description": "A community-driven, open-source search and analytics suite derived from Elasticsearch. It includes advanced features like vector search, anomaly detection, and ML capabilities for building AI-powered search and observability solutions.",
+    "usage": "Full-text search for applications, log analytics, security analytics, performance monitoring, storing and querying vector embeddings for RAG (Retrieval Augmented Generation) in AI applications, anomaly detection in time-series data.",
+    "documentationLinks": {
+      "official": "https://opensearch.org/docs/"
+    },
+    "installationSetup": "Docker, Kubernetes Helm Charts, Linux packages (deb/rpm), standalone archives.",
+    "selfHostedOption": "Yes (core offering is self-hostable)",
+    "collaborationFeatures": ["Multi-user dashboards and visualizations", "Shared indices and data streams", "Role-based access control (with security plugin)", "Community forum and GitHub for shared development."]
+  },
+  {
+    "appName": "Meilisearch (with Hybrid Search)",
+    "category": "Backend Development",
+    "type": "Open-Source (MIT License)",
+    "description": "A fast, open-source search engine that provides a flexible API for integrating search into applications. It offers 'hybrid search' blending full-text and semantic search for more relevant results, leveraging AI principles for ranking.",
+    "usage": "Adding 'search-as-you-type' functionality to websites and applications, e-commerce product search, content search, leveraging semantic search for improved relevancy without complex ML setup.",
+    "documentationLinks": {
+      "official": "https://www.meilisearch.com/docs"
+    },
+    "installationSetup": "Docker, standalone binary (Linux, macOS, Windows), API clients for various languages.",
+    "selfHostedOption": "Yes (core offering is self-hostable)",
+    "collaborationFeatures": ["API-driven, allowing multiple developers to integrate", "Community support channels (Discord, GitHub)."]
+  },
+  {
+    "appName": "Redis (as a Vector Database & for AI caching)",
+    "category": "Backend Development",
+    "type": "Open-Source (BSD 3-Clause License, RSAL for some modules)",
+    "description": "An open-source, in-memory data structure store, used as a database, cache, and message broker. Recent versions and modules extend Redis to function as a high-performance vector database, critical for AI applications like RAG.",
+    "usage": "High-speed caching for API responses and application data, real-time analytics, session management, message queues, storing and querying vector embeddings for semantic search and RAG in AI systems, AI model caching.",
+    "documentationLinks": {
+      "official": "https://redis.io/docs/"
+    },
+    "installationSetup": "Docker, OS package managers, source compilation.",
+    "selfHostedOption": "Yes (widely used for self-hosting)",
+    "collaborationFeatures": ["Shared data structures and caching layers across microservices", "Clustering for distributed use cases", "Sentinel for high availability."]
+  },
+  {
+    "appName": "CodeFuse-AI/ModelCache",
+    "category": "Backend Development",
+    "type": "Open-Source (Apache License 2.0)",
+    "description": "A LLM semantic caching system designed to enhance user experience by reducing response time via cached query-result pairs, leveraging vector databases for semantic matching.",
+    "usage": "Caching responses from Large Language Models (LLMs) to reduce API calls, improve response times, and lower costs in AI-powered applications, especially for frequently asked or semantically similar queries.",
+    "documentationLinks": {
+      "official": "https://github.com/codefuse-ai/ModelCache"
+    },
+    "installationSetup": "Python (pip), Docker, requires MySQL and a vector database like Milvus or PostgreSQL with pgvector.",
+    "selfHostedOption": "Yes (designed for self-hosting alongside your LLM infrastructure)",
+    "collaborationFeatures": ["API for cache management (insert, query, clear)", "Can be integrated into a shared backend infrastructure for AI applications."]
+  },
+  {
+    "appName": "Apache Kafka (with Kafka Streams/KSQL DB for ML)",
+    "category": "Backend Development",
+    "type": "Open-Source (Apache License 2.0)",
+    "description": "A distributed streaming platform capable of handling trillions of events a day. While not inherently 'AI', it's a foundational component for real-time data ingestion, processing, and serving for large-scale AI/ML applications, especially with Kafka Streams or KSQL DB.",
+    "usage": "Building real-time data pipelines for ML model training data, streaming data for online inference, event-driven architectures for AI services, change data capture for AI data sources, real-time analytics for AI observability.",
+    "documentationLinks": {
+      "official": "https://kafka.apache.org/documentation/"
+    },
+    "installationSetup": "Downloadable binary, Docker, Kubernetes Helm Charts.",
+    "selfHostedOption": "Yes (very common for self-hosted data infrastructure)",
+    "collaborationFeatures": ["Shared topics for data exchange between services", "Consumer groups for parallel processing by multiple ML services", "Schema Registry for data consistency."]
+  },
+  {
+    "appName": "Apache Pulsar",
+    "category": "Backend Development",
+    "type": "Open-Source (Apache License 2.0)",
+    "description": "A distributed pub-sub messaging and streaming platform designed for high performance, flexibility, and scalability. It combines messaging, queuing, and streaming capabilities, making it suitable for AI data pipelines.",
+    "usage": "Real-time data ingestion for ML, streaming analytics, asynchronous communication between AI microservices, building event-driven AI architectures, supporting geo-replicated AI workloads.",
+    "documentationLinks": {
+      "official": "https://pulsar.apache.org/docs/latest/"
+    },
+    "installationSetup": "Docker, Kubernetes Helm Charts, standalone binary.",
+    "selfHostedOption": "Yes (designed for self-hosting)",
+    "collaborationFeatures": ["Multi-tenancy for isolated teams/applications", "Geo-replication for disaster recovery and distributed AI setups", "Shared topics and namespaces."]
+  },
+  {
+    "appName": "Milvus",
+    "category": "Backend Development",
+    "type": "Open-Source (Apache License 2.0)",
+    "description": "An open-source vector database built for AI applications. It's designed for massive-scale vector embedding similarity search, which is crucial for RAG, semantic search, and recommendation systems.",
+    "usage": "Storing and indexing high-dimensional vector embeddings generated by ML models, performing similarity searches for RAG, image/video search, recommendation engines, fraud detection, and drug discovery.",
+    "documentationLinks": {
+      "official": "https://milvus.io/docs/"
+    },
+    "installationSetup": "Docker Compose, Kubernetes Helm Charts.",
+    "selfHostedOption": "Yes (designed for self-hosting large vector datasets)",
+    "collaborationFeatures": ["API for data ingestion and querying", "Can be accessed by multiple AI services concurrently", "Scalable for team data science projects."]
+  },
+  {
+    "appName": "Weaviate",
+    "category": "Backend Development",
+    "type": "Open-Source (BSD 3-Clause License)",
+    "description": "An open-source vector database that allows you to store data objects and vector embeddings. It includes built-in modules for various ML models (like BERT, GPT-3) to vectorize data, making it easier to build AI-powered search and RAG applications.",
+    "usage": "Storing data and its vector embeddings, semantic search, generative feedback loops (RAG), recommendation systems, anomaly detection, question-answering systems directly from your data.",
+    "documentationLinks": {
+      "official": "https://weaviate.io/developers/weaviate/current/index.html"
+    },
+    "installationSetup": "Docker Compose, Kubernetes Helm Charts, various client libraries.",
+    "selfHostedOption": "Yes (Community Edition is fully self-hostable)",
+    "collaborationFeatures": ["API for data operations, allowing multiple services/teams to interact", "Schema definition for shared data models."]
+  },
+  {
+    "appName": "Supabase (with pgvector for Vector DB)",
+    "category": "Backend Development",
+    "type": "Open-Source (MIT License, PostgreSQL license)",
+    "description": "An open-source Firebase alternative providing a PostgreSQL database, real-time subscriptions, authentication, and a REST/GraphQL API. The `pgvector` extension turns PostgreSQL into a powerful vector database for AI applications.",
+    "usage": "Rapid API development, real-time data synchronization, authentication for AI apps, storing and querying vector embeddings directly in your PostgreSQL database for RAG, semantic search, and recommendation features.",
+    "documentationLinks": {
+      "official": "https://supabase.com/docs"
+    },
+    "installationSetup": "Docker Compose, Supabase CLI for local development.",
+    "selfHostedOption": "Yes (can be fully self-hosted)",
+    "collaborationFeatures": ["Team management, role-based access to database and API", "Real-time subscriptions for collaborative apps", "Shared database schemas and functions."]
+  },
+  {
+    "appName": "GraphQL Nexus (for AI API design)",
+    "category": "Backend Development",
+    "type": "Open-Source (MIT License)",
+    "description": "A code-first GraphQL schema construction library for Node.js/TypeScript. While not inherently 'AI', it facilitates building structured GraphQL APIs that can serve AI models or provide data for AI applications, and its code-first nature aligns with AI code generation efforts.",
+    "usage": "Building GraphQL APIs for data access in AI applications, defining schemas for ML model inputs/outputs, integrating with vector databases, creating type-safe APIs for front-end consumption of AI services.",
+    "documentationLinks": {
+      "official": "https://nexusjs.org/docs/"
+    },
+    "installationSetup": "NPM/Yarn package installation (`npm install graphql-nexus`), integrates into Node.js projects.",
+    "selfHostedOption": "Yes (library, used within your Node.js backend application)",
+    "collaborationFeatures": ["Type-safe schema definition encourages consistency across teams", "Modular schema design for distributed development."]
+  },
+  {
+    "appName": "PostgreSQL (with pgvector)",
+    "category": "Backend Development",
+    "type": "Open-Source (PostgreSQL License)",
+    "description": "A powerful, open-source relational database system. With the `pgvector` extension, it can store and query vector embeddings efficiently, turning a traditional relational database into a robust solution for AI applications requiring similarity search.",
+    "usage": "General-purpose data storage, transactional data, combined with `pgvector` for storing and querying vector embeddings for RAG, semantic search, and recommendation systems directly within SQL queries.",
+    "documentationLinks": {
+      "official": "https://www.postgresql.org/docs/",
+      "pgvector": "https://github.com/pgvector/pgvector"
+    },
+    "installationSetup": "OS package managers, Docker, source compilation.",
+    "selfHostedOption": "Yes (extremely common for self-hosting)",
+    "collaborationFeatures": ["User roles and permissions", "Schema management", "Shared database access for multiple services and teams."]
+  },
+  {
+    "appName": "Qdrant",
+    "category": "Backend Development",
+    "type": "Open-Source (Apache License 2.0)",
+    "description": "An open-source vector similarity search engine and vector database. It provides a production-ready service with a convenient API to store, search, and manage vectors with an additional payload.",
+    "usage": "High-performance vector similarity search for large datasets, powering semantic search, recommendation engines, image retrieval, and RAG architectures in AI applications.",
+    "documentationLinks": {
+      "official": "https://qdrant.tech/documentation/"
+    },
+    "installationSetup": "Docker, standalone binary, Kubernetes Helm charts, client libraries.",
+    "selfHostedOption": "Yes (designed for self-hosting)",
+    "collaborationFeatures": ["API for data and query operations, enabling multiple services/teams to interact.", "Scalable deployment for shared AI infrastructure."]
   }
 ]
