@@ -1,14 +1,21 @@
 import React from "react";
 import Link from "next/link";
+import { person, social } from "@/app/resources/content";
+
 
 const Footer = () => {
   return (
     <footer className="bg-gray-800 text-white p-8 mt-16">
       <div className="container mx-auto flex flex-wrap justify-between items-center">
         <div className="w-full md:w-1/3 text-center md:text-left mb-4 md:mb-0">
-          <p>&copy; {new Date().getFullYear()} V Chaitanya Chowdari. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} {person.name}. All rights reserved.</p>
         </div>
         <div className="w-full md:w-2/3 flex justify-center md:justify-end space-x-6">
+          {social.map((item) => (
+            <a key={item.name} href={item.link} className="me-4 text-reset">
+              <i className={`fab fa-${item.icon}`}></i>
+            </a>
+          ))}
           <Link href="/terms" className="hover:underline">
             Terms & Conditions
           </Link>
