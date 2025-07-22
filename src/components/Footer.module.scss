@@ -1,7 +1,144 @@
-@media (--s) {
-    .mobile {
-        text-align: center;
-        flex-direction: column;
-        align-items: center;
-    }
+.footer {
+  background: #23242a;
+  color: #fff;
+  font-family: 'Inter', Arial, sans-serif;
+  padding-top: 0;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1a1b20;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border-bottom: 1px solid #333;
+  flex-wrap: wrap;
+}
+
+.socials a {
+  color: #fff;
+  margin-left: 1rem;
+  font-size: 1.2rem;
+  transition: color 0.2s;
+}
+.socials a:hover {
+  color: #0d6efd;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 2.5rem 2rem 1.5rem 2rem;
+  gap: 2rem;
+}
+
+.col {
+  flex: 1 1 200px;
+  min-width: 200px;
+  max-width: 300px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+.desc {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 1.5rem;
+}
+
+.heading {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.list,
+.contact {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list li {
+  margin-bottom: 0.7rem;
+}
+.list a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.list a:hover {
+  color: #0d6efd;
+}
+
+.contact li {
+  margin-bottom: 0.7rem;
+  display: flex;
+  align-items: center;
+  color: #ccc;
+  font-size: 1rem;
+}
+.contact i {
+  margin-right: 0.7rem;
+  color: #0d6efd;
+  font-size: 1.1rem;
+}
+
+.bottom {
+  text-align: center;
+  padding: 1rem 2rem;
+  background: #1a1b20;
+  font-size: 0.95rem;
+  color: #aaa;
+  border-top: 1px solid #333;
+}
+.bottom a {
+  color: #0d6efd;
+  text-decoration: none;
+  margin-left: 0.3rem;
+}
+.bottom a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  .main {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  .col {
+    min-width: 180px;
+    max-width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.7rem;
+    padding: 1rem;
+  }
+  .main {
+    flex-direction: column;
+    padding: 2rem 1rem 1rem 1rem;
+    gap: 1.5rem;
+  }
+  .col {
+    min-width: 0;
+    max-width: 100%;
+  }
+  .bottom {
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
 }
