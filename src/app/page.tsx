@@ -6,6 +6,7 @@ import { Projects } from "@/components/work/Projects";
 import { baseURL, routes } from "@/app/resources";
 import { home, about, person, newsletter } from "@/app/resources/content";
 import { Mailchimp } from "@/components";
+import RollingGallery from "@/components/RollingGallery";
 import { Posts } from "@/components/blog/Posts";
 import { Meta, Schema } from "@/once-ui/modules";
 
@@ -77,6 +78,7 @@ export default function Home() {
           </RevealFx>
         </Column>
       </Column>
+      <RollingGallery />
       <RevealFx translateY="16" delay={0.6}>
         <Projects range={[1, 1]} />
       </RevealFx>

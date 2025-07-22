@@ -1,0 +1,133 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
+import { motion, useMotionValue, useAnimation, useTransform } from "framer-motion";
+import "./RollingGallery.css";
+
+import { gallery } from "@/app/resources/content";
+
+const RollingGallery = ({ autoplay = false, pauseOnHover = false }) => {
+  const featuredImages = gallery.images.filter(img => img.featured);
+  const imagesToDisplay = featuredImages.length > 0 ? featuredImages : gallery.images;
+
+  const [isScreenSizeSm, setIsScreenSizeSm] = useState(window.innerWidth <= 640);
+
+  const cylinderWidth = (() => {
+    if (imagesToDisplay.length === 0) return 0;
+    const firstImageOrientation = imagesToDisplay[0].orientation;
+    if (firstImageOrientation === "horizontal") {
+      return isScreenSizeSm ? 3500 : 3500; // Larger values for horizontal to increase gap
+    } else {
+      return isScreenSizeSm ? 2500 : 3000; // Current values for vertical
+    }
+  })();
+
+  const faceCount = imagesToDisplay.length;
+  const faceWidth = cylinderWidth / faceCount;
+  const dragFactor = 0.05;
+  const radius = cylinderWidth / (2 * Math.PI);
+
+  const rotation = useMotionValue(0);
+  const controls = useAnimation();
+  const autoplayRef = useRef();
+
+  const handleDrag = (_, info) => {
+    rotation.set(rotation.get() + info.offset.x * dragFactor);
+  };
+
+  const handleDragEnd = (_, info) => {
+    controls.start({
+      rotateY: rotation.get() + info.velocity.x * dragFactor,
+      transition: { type: "spring", stiffness: 60, damping: 20, mass: 0.1, ease: "easeOut" },
+    });
+  };
+
+  const transform = useTransform(rotation, (value) => {
+    return `rotate3d(0, 1, 0, ${value}deg)`;
+  });
+
+  useEffect(() => {
+    if (autoplay) {
+      autoplayRef.current = setInterval(() => {
+        controls.start({
+          rotateY: rotation.get() - (360 / faceCount),
+          transition: { duration: 2, ease: "linear" },
+        });
+        rotation.set(rotation.get() - (360 / faceCount));
+      }, 2000);
+
+      return () => clearInterval(autoplayRef.current);
+    }
+  }, [autoplay, rotation, controls, faceCount]);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsScreenSizeSm(window.innerWidth <= 640);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const handleMouseEnter = () => {
+    if (autoplay && pauseOnHover) {
+      clearInterval(autoplayRef.current);
+      controls.stop();
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (autoplay && pauseOnHover) {
+      controls.start({
+        rotateY: rotation.get() - (360 / faceCount),
+        transition: { duration: 2, ease: "linear" },
+      });
+      rotation.set(rotation.get() - (360 / faceCount));
+
+      autoplayRef.current = setInterval(() => {
+        controls.start({
+          rotateY: rotation.get() - (360 / faceCount),
+          transition: { duration: 2, ease: "linear" },
+        });
+        rotation.set(rotation.get() - (360 / faceCount));
+      }, 2000);
+    }
+  };
+
+  return (
+    <div className="gallery-container">
+      <h2 className="gallery-heading">Top Featured</h2>
+      <div className="gallery-content">
+        <motion.div
+          drag="x"
+          className="gallery-track"
+          onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}
+          style={{
+            transform: transform,
+            rotateY: rotation,
+            width: cylinderWidth,
+            transformStyle: "preserve-3d",
+          }}
+          onDrag={handleDrag}
+          onDragEnd={handleDragEnd}
+          animate={controls}
+        >
+          {imagesToDisplay.map((url, i) => (
+            <div
+              key={i}
+              className="gallery-item"
+              style={{
+                width: `${faceWidth}px`,
+                transform: `rotateY(${i * (360 / faceCount)}deg) translateZ(${radius}px)`,
+              }}
+            >
+              <img src={url.src} alt={url.alt} className="gallery-img" />
+            </div>
+          ))}
+        </motion.div>
+      </div>
+    </div>
+  );
+};
+
+export default RollingGallery;

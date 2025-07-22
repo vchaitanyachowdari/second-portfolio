@@ -1,51 +1,30 @@
-import { Flex, IconButton, SmartLink, Text } from "@/once-ui/components";
-import { person, social } from "@/app/resources/content";
-import styles from "./Footer.module.scss";
+import React from "react";
+import Link from "next/link";
 
-export const Footer = () => {
-  const currentYear = new Date().getFullYear();
-
+const Footer = () => {
   return (
-    <Flex
-      as="footer"
-      fillWidth
-      padding="8"
-      horizontal="center"
-      mobileDirection="column"
-    >
-      <Flex
-        className={styles.mobile}
-        maxWidth="m"
-        paddingY="8"
-        paddingX="16"
-        gap="16"
-        horizontal="space-between"
-        vertical="center"
-      >
-        <Text variant="body-default-s" onBackground="neutral-strong">
-          <Text onBackground="neutral-weak">© {currentYear} /</Text>
-          <Text paddingX="4">{person.name}</Text>
-          <Text onBackground="neutral-weak">
-            <a href="https://www.linkedin.com/in/v-chaitanya-chowdari-bb3733202/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          </Text>
-        </Text>
-        <Flex gap="16">
-          {social.map(
-            (item) =>
-              item.link && (
-                <IconButton
-                  key={item.name}
-                  href={item.link}
-                  icon={item.icon}
-                  tooltip={item.name}
-                  size="s"
-                  variant="ghost"
-                />
-              ),
-          )}
-        </Flex>
-      </Flex>
-      <Flex height="80" show="s"></Flex>
-    </Flex>
+    <footer className="bg-gray-800 text-white p-8 mt-16">
+      <div className="container mx-auto flex flex-wrap justify-between items-center">
+        <div className="w-full md:w-1/3 text-center md:text-left mb-4 md:mb-0">
+          <p>&copy; {new Date().getFullYear()} V Chaitanya Chowdari. All rights reserved.</p>
+        </div>
+        <div className="w-full md:w-2/3 flex justify-center md:justify-end space-x-6">
+          <Link href="/terms" className="hover:underline">
+            Terms & Conditions
+          </Link>
+          <Link href="/privacy" className="hover:underline">
+            Privacy Policy
+          </Link>
+          <Link href="/refund" className="hover:underline">
+            Refund & Cancellation
+          </Link>
+          <Link href="/contact" className="hover:underline">
+            Contact Us
+          </Link>
+        </div>
+      </div>
+    </footer>
   );
 };
+
+export default Footer;
