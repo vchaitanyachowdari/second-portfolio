@@ -1,19 +1,23 @@
 import React from "react";
 import Link from "next/link";
-import { person, social, home, about, blog, techStack, services, work, gallery, resources, store, tools } from "@/app/resources/content";
+import { person, social, home, services } from "@/app/resources/content";
 import { Column, Flex, Text, Heading } from "@/once-ui/components";
 
 const Footer = () => {
+  // Define navigation links dynamically from content.js or explicitly
   const pages = [
-    { name: home.label, path: home.path },
-    { name: about.label, path: about.path },
-    { name: blog.label, path: blog.path },
-    { name: work.label, path: work.path },
-    { name: gallery.label, path: gallery.path },
-    { name: techStack.label, path: techStack.path },
-    { name: resources.label, path: resources.path },
-    { name: store.label, path: store.path },
-    { name: tools.label, path: tools.path },
+    { name: "Home", path: home.path },
+    { name: "About", path: "/about" },
+    { name: "Blog", path: "/blog" },
+    { name: "Work", path: "/work" },
+    { name: "Gallery", path: "/gallery" },
+  ];
+
+  const serviceLinks = [
+    { name: "AI Solutions", path: "/services" }, // Example, link to services page
+    { name: "Automation Tools", path: "/services" },
+    { name: "Web Development", path: "/services" },
+    { name: "Digital Marketing", path: "/services" },
   ];
 
   const legalLinks = [
@@ -25,29 +29,38 @@ const Footer = () => {
 
   return (
     <footer className="bg-gray-900 text-gray-300 p-8 mt-16">
-      <div className="container mx-auto flex flex-wrap justify-between items-start gap-8">
+      {/* Social Media Section */}
+      <section className="flex flex-col md:flex-row justify-between items-center p-4 border-b border-gray-700 mb-8">
+        <div className="mb-4 md:mb-0">
+          <span className="text-lg">Get connected with us on social networks:</span>
+        </div>
+        <div className="flex space-x-6">
+          {social.map((item) => (
+            <a key={item.name} href={item.link} className="text-gray-400 hover:text-white transition-colors duration-200">
+              {/* Assuming Font Awesome or similar is globally available for these classes */}
+              <i className={`fab fa-${item.icon.toLowerCase()} text-2xl`}></i>
+            </a>
+          ))}
+        </div>
+      </section>
 
-        {/* Logo and Description */}
-        <Column className="w-full md:w-1/4 mb-6 md:mb-0">
-          {/* Assuming you have a Logo component or an image for the logo */}
-          {/* <img src="/path/to/your/logo.png" alt="Logo" className="mb-4" /> */}
+      {/* Main Footer Content */}
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+        {/* Company Information */}
+        <Column>
+          {/* Replace with your actual logo if available, otherwise use text */}
           <Heading as="h6" variant="heading-default-s" className="text-white mb-4 uppercase font-bold">
             {person.name}
           </Heading>
-          <Text variant="body-default-s">
-            {home.subline} {/* Using the subline from home as a description */}
+          <Text variant="body-default-s" className="mb-4">
+            Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit
+            amet, consectetur adipisicing elit.
           </Text>
-          <Flex className="mt-4 space-x-4">
-            {social.map((item) => (
-              <a key={item.name} href={item.link} className="text-gray-400 hover:text-white transition-colors duration-200">
-                <i className={`fab fa-${item.icon} text-xl`}></i>
-              </a>
-            ))}
-          </Flex>
         </Column>
 
         {/* Pages Column */}
-        <Column className="w-full md:w-1/6 mb-6 md:mb-0">
+        <Column>
           <Heading as="h6" variant="heading-default-s" className="text-white mb-4 uppercase font-bold">
             Pages
           </Heading>
@@ -59,44 +72,33 @@ const Footer = () => {
         </Column>
 
         {/* Services Column */}
-        <Column className="w-full md:w-1/6 mb-6 md:mb-0">
+        <Column>
           <Heading as="h6" variant="heading-default-s" className="text-white mb-4 uppercase font-bold">
             Services
           </Heading>
           <ul className="space-y-2">
-            <li><Link href={services.path} className="hover:underline">{services.label}</Link></li>
-            {/* Add more specific services if available in content.js or define them here */}
-            <li><Link href="#!" className="hover:underline">AI Solutions</Link></li>
-            <li><Link href="#!" className="hover:underline">Automation</Link></li>
-            <li><Link href="#!" className="hover:underline">Web Development</Link></li>
-          </ul>
-        </Column>
-
-        {/* Legal Links Column */}
-        <Column className="w-full md:w-1/6 mb-6 md:mb-0">
-          <Heading as="h6" variant="heading-default-s" className="text-white mb-4 uppercase font-bold">
-            Legal
-          </Heading>
-          <ul className="space-y-2">
-            {legalLinks.map((link) => (
-              <li key={link.name}><Link href={link.path} className="hover:underline">{link.name}</Link></li>
+            {serviceLinks.map((service) => (
+              <li key={service.name}><Link href={service.path} className="hover:underline">{service.name}</Link></li>
             ))}
           </ul>
         </Column>
 
-        {/* Contact Info Column */}
-        <Column className="w-full md:w-1/4 mb-6 md:mb-0">
+        {/* Contact Information */}
+        <Column>
           <Heading as="h6" variant="heading-default-s" className="text-white mb-4 uppercase font-bold">
             Contact
           </Heading>
           <Text variant="body-default-s" className="mb-2">
-            <i className="fas fa-map-marker-alt mr-3"></i> {person.location}
+            <i className="fas fa-home mr-3"></i> New York, NY 10012, US
           </Text>
           <Text variant="body-default-s" className="mb-2">
-            <i className="fas fa-envelope mr-3"></i> {person.email}
+            <i className="fas fa-envelope mr-3"></i> info@example.com
           </Text>
           <Text variant="body-default-s" className="mb-2">
-            <i className="fas fa-phone mr-3"></i> + 01 234 567 88 {/* Placeholder phone number */}
+            <i className="fas fa-phone mr-3"></i> + 01 234 567 88
+          </Text>
+          <Text variant="body-default-s" className="mb-2">
+            <i className="fas fa-print mr-3"></i> + 01 234 567 89
           </Text>
         </Column>
 
