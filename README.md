@@ -22,7 +22,7 @@
     *   [Editing Content Definitions](#editing-content-definitions)
     *   [Creating Content (MDX)](#creating-content-mdx)
 8.  [Code Quality: Linting and Formatting](#code-quality-linting-and-formatting)
-9.  [Deployment](#deployment)
+9.  [Deployment](deployment.md)
 10. [Demo & Screenshots](#demo--screenshots)
 11. [Once UI Documentation](#once-ui-documentation)
 12. [Contributing & Getting Involved](#contributing--getting-involved)
@@ -60,6 +60,7 @@ Magic Portfolio comes packed with features designed to make your personal websit
 *   **📱 Responsive Design:** Optimized for a flawless experience across all devices, from desktops to mobile phones.
 *   **✨ Smooth Animations & Micro-interactions:** Subtle hover effects and scroll-reveal animations on cards and content blocks enhance user engagement without being distracting.
 *   **🧼 Clean & Modern Aesthetic:** Focus on readability, ample white space, and a professional presentation.
+*   **🎨 Themed Footer:** A fully customizable footer that seamlessly integrates with the overall website theme, including dynamic content columns.
 
 **Content Management & Customization:**
 *   **📝 MDX Powered:** Author rich content for your blog posts, project details, and resources using MDX, allowing for both Markdown simplicity and React component power.
@@ -262,21 +263,7 @@ Tailor Magic Portfolio to your needs:
 
 ---
 
-## Deployment
 
-### Recommended: Vercel
-Deploy seamlessly with [Vercel](https://vercel.com/), the creators of Next.js:
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fonce-ui-system%2Fmagic-portfolio&project-name=portfolio&repository-name=portfolio&redirect-url=https%3A%2F%2Fgithub.com%2Fonce-ui-system%2Fmagic-portfolio&demo-title=Magic%20Portfolio&demo-description=Showcase%20your%20designers%20or%20developer%20portfolio&demo-url=https%3A%2F%2Fdemo.magic-portfolio.com&demo-image=%2F%2Fraw.githubusercontent.com%2Fonce-ui-system%2Fmagic-portfolio%2Fmain%2Fpublic%2Fimages%2Fog%2Fhome.jpg)
-
-Connect your Git repository to Vercel for automatic deployments.
-
-### Other Platforms
-You can also deploy to other Node.js compatible platforms like Netlify, AWS Amplify, Google Cloud Run, or self-host. Typically, you'll run `npm run build` and serve the `.next` directory (or `out` for static exports).
-
-**Environment Variables:** Remember to set up any necessary environment variables (e.g., `PAGE_ACCESS_PASSWORD`) in your deployment platform's settings.
-
----
 
 ## Demo & Screenshots
 

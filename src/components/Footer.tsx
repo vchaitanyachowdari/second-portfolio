@@ -6,22 +6,31 @@ import styles from "./Footer.module.scss";
 
 const Footer = () => {
   const products = [
-    { name: "Angular", path: "#" },
-    { name: "React", path: "#" },
-    { name: "Vue", path: "#" },
-    { name: "Laravel", path: "#" },
+    { name: "About", path: "/about" },
+    { name: "Work", path: "/work" },
+    { name: "Blog", path: "/blog" },
+    { name: "Resources", path: "/resource" },
+    { name: "Tech Stack", path: "/tech-stack" },
+    { name: "Services", path: "/services" },
+    { name: "Store", path: "/store" },
   ];
   const usefulLinks = [
-    { name: "Pricing", path: "#" },
-    { name: "Settings", path: "#" },
-    { name: "Orders", path: "#" },
-    { name: "Help", path: "#" },
+    { name: "AI Automation", path: "#" },
+    { name: "AI Solutions", path: "#" },
+    { name: "AI Integration", path: "#" },
+    { name: "App Development", path: "#" },
+    { name: "Web Development", path: "#" },
+  ];
+  const moreLinks = [
+    { name: "Privacy Policy", path: "/privacy " },
+    { name: "Refund & Cancellation", path: "/refund" },
+    { name: "Contact", path: "/contact" },
   ];
   return (
     <Column as="footer" className={styles.footer}>
       {/* Top Bar: Social Media */}
       <Flex className={styles.topbar} horizontal="space-between" vertical="center" wrap>
-        <Text>Get connected with us on social networks:</Text>
+        
         <Flex className={styles.socials}>
           {social.map((item) => (
             <a key={item.name} href={item.link} aria-label={item.name} target="_blank" rel="noopener noreferrer">
@@ -41,7 +50,7 @@ const Footer = () => {
         </Column>
         {/* Products/Services */}
         <Column className={styles.col}>
-          <Heading as="h6" className={styles.heading}>PRODUCTS</Heading>
+          <Heading as="h6" className={styles.heading}></Heading>
           <ul className={styles.list}>
             {products.map((p) => (
               <li key={p.name}><a href={p.path}>{p.name}</a></li>
@@ -50,9 +59,18 @@ const Footer = () => {
         </Column>
         {/* Useful Links */}
         <Column className={styles.col}>
-          <Heading as="h6" className={styles.heading}>USEFUL LINKS</Heading>
+          <Heading as="h6" className={styles.heading}>Services</Heading>
           <ul className={styles.list}>
             {usefulLinks.map((l) => (
+              <li key={l.name}><a href={l.path}>{l.name}</a></li>
+            ))}
+          </ul>
+        </Column>
+        {/* More Links */}
+        <Column className={styles.col}>
+          <Heading as="h6" className={styles.heading}></Heading>
+          <ul className={styles.list}>
+            {moreLinks.map((l) => (
               <li key={l.name}><a href={l.path}>{l.name}</a></li>
             ))}
           </ul>
@@ -61,16 +79,16 @@ const Footer = () => {
         <Column className={styles.col}>
           <Heading as="h6" className={styles.heading}>CONTACT</Heading>
           <ul className={styles.contact}>
-            <li><i className="fas fa-home"></i> New York, NY 10012, US</li>
-            <li><i className="fas fa-envelope"></i> info@example.com</li>
-            <li><i className="fas fa-phone"></i> + 01 234 567 88</li>
-            <li><i className="fas fa-print"></i> + 01 234 567 89</li>
+            <li><i className="fas fa-home"></i>Davangere, Karnataka, India</li>
+            <li><i className="fas fa-envelope"></i> vchaitanya@chowdari.in</li>
+            <li><i className="fas fa-phone"></i> + 91 94826 87922</li>
+            <li><i className="fas fa-print"></i></li>
           </ul>
         </Column>
       </Flex>
       {/* Copyright */}
       <Flex className={styles.bottom} horizontal="center">
-        <Text>© {new Date().getFullYear()} Copyright: <a href="https://mdbootstrap.com/">MDBootstrap.com</a></Text>
+        <Text>© {new Date().getFullYear()} Copyright: <a href="https://chowdari.in/">Chowdari.in</a></Text>
       </Flex>
     </Column>
   );

@@ -1,0 +1,26 @@
+.contactForm {
+  max-width: 600px;
+  width: 100%;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: var(--surface-medium);
+  box-shadow: var(--shadow-small);
+}
+
+.textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border-medium);
+  border-radius: 4px;
+  background-color: var(--surface-weak);
+  color: var(--neutral-on-background-strong);
+  font-family: inherit;
+  font-size: 1rem;
+  resize: vertical;
+
+  &:focus {
+    outline: none;
+    border-color: var(--brand-on-background-medium);
+    box-shadow: 0 0 0 2px var(--brand-on-background-weak);
+  }
+}

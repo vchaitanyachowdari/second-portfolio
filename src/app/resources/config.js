@@ -12,6 +12,10 @@ const routes = {
   "/services": true,
   "/store": true,
   "/tools": true,
+  "/contact": true,
+  "/privacy": true,
+  "/refund": true,
+  "/terms": true,
 };
 
 // Enable password protection on selected routes
