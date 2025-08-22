@@ -3,10 +3,11 @@ import { baseURL } from "@/app/resources";
 
 export const seoConfig = {
   // Basic SEO
-  title: "Portfolio - Full Stack Developer & Designer",
-  description: "Professional portfolio showcasing full-stack development, UI/UX design, and innovative web solutions. Explore my projects, blog posts, and technical expertise.",
+  title: "V Chaitanya Chowdari - AI Generilist, Web Developer, Fullstack Developer, Generative AI Expert",
+  description: "Professional Portfolio showcasing AI Automation, AI Ad's Making, AI Model Training, AI Development, Researcher, full-stack development, UI/UX design, and innovative web solutions. Explore my projects, blog posts, and technical expertise.",
   keywords: [
-    "full stack developer",
+    "AI Generilist",
+    "AI Automation Expert",
     "web developer",
     "UI/UX designer", 
     "React developer",
@@ -21,7 +22,16 @@ export const seoConfig = {
     "modern web development",
     "responsive design",
     "user experience",
-    "web applications"
+    "web applications",
+    "ai model train",
+    "AI Trainer",
+    "Marketing Expert",
+    "Meta Official Partner",
+    "Marketing Expert",
+    "Influnencer",
+    "GEO Expert",
+    "LLM Reainer",
+    "AI Expert"
   ],
   
   // Open Graph for social media and AI crawlers
@@ -29,9 +39,9 @@ export const seoConfig = {
     type: "website",
     locale: "en_US",
     url: baseURL,
-    siteName: "Professional Portfolio",
-    title: "Portfolio - Full Stack Developer & Designer",
-    description: "Professional portfolio showcasing full-stack development, UI/UX design, and innovative web solutions.",
+    siteName: "V Chaitanya Chowsari - Portfolio Website",
+    title: "V Chaitanya Chowdari - Full Stack Developer & Designer",
+    description: "Professional Portfolio showcasing AI Automation, AI Ad's Making, AI Model Training, AI Development, Researcher, full-stack development, UI/UX design, and innovative web solutions. Explore my projects, blog posts, and technical expertise.",
     images: [
       {
         url: `${baseURL}/images/og/home.jpg`,
@@ -48,26 +58,28 @@ export const seoConfig = {
     title: "Portfolio - Full Stack Developer & Designer",
     description: "Professional portfolio showcasing full-stack development, UI/UX design, and innovative web solutions.",
     images: [`${baseURL}/images/og/home.jpg`],
-    creator: "@yourusername", // Replace with actual Twitter handle
+    creator: "@vchaitanyacho", // Replace with actual Twitter handle
   },
   
   // Structured Data for AI understanding
   structuredData: {
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": "Your Name", // Replace with actual name
+    "name": "V Chaitanya Chowdari", // Replace with actual name
     "jobTitle": "Full Stack Developer & Designer",
     "description": "Professional full-stack developer and designer specializing in modern web technologies and user experience design.",
     "url": baseURL,
     "sameAs": [
-      "https://github.com/yourusername", // Replace with actual profiles
-      "https://linkedin.com/in/yourusername",
-      "https://twitter.com/yourusername"
+      "https://github.com/vchaitanyachowdari", // Replace with actual profiles
+      "https://linkedin.com/in/vchaitanyachowdari",
+      "https://twitter.com/vchaitanyacho"
     ],
     "knowsAbout": [
       "Web Development",
       "Full Stack Development", 
       "React",
+      "AI Generilist",
+      "AI Automation Expert",
       "Next.js",
       "TypeScript",
       "JavaScript",
@@ -78,14 +90,23 @@ export const seoConfig = {
       "API Development",
       "Responsive Design",
       "User Experience",
-      "Software Engineering"
+      "Software Engineering",
+      "ai model train",
+      "AI Trainer",
+      "Marketing Expert",
+      "Meta Official Partner",
+      "Marketing Expert",
+      "Influnencer",
+      "GEO Expert",
+      "LLM Reainer",
+      "AI Expert"
     ],
     "hasOccupation": {
       "@type": "Occupation",
       "name": "Full Stack Developer",
       "occupationLocation": {
         "@type": "Place",
-        "name": "Remote/Global" // Update with your location
+        "name": "Davangere, Karnataka, India" // Update with your location
       }
     }
   },
