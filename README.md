@@ -316,3 +316,46 @@ Full License Details: See the LICENSE file or visit creativecommons.org/licenses
 This is the complete drafted README content. You can copy this and paste it into your `README.md` file.
 
 Since I cannot use the `submit` tool to write this to the file due to the previously encountered tool limitations with large content, this is the best I can do to assist with the README update. All the planned drafting steps are now complete.
+
+## 🚀 Production Deployment
+
+Your portfolio is now production-ready! Here are the deployment options:
+
+### Quick Deploy to Vercel (Recommended)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvchaitanyachowdari%2Fsecond-portfolio)
+
+### Manual Deployment
+```bash
+# Run the production deployment script
+npm run deploy
+
+# Or build manually
+npm run build
+npm start
+```
+
+### Docker Deployment
+```bash
+# Build and run with Docker
+npm run docker:build
+npm run docker:run
+```
+
+### Environment Variables for Production
+Make sure to set these in your hosting platform:
+- `PAGE_ACCESS_PASSWORD` - Password for protected routes
+- `NEXT_PUBLIC_EMAILJS_SERVICE_ID` - EmailJS service ID
+- `NEXT_PUBLIC_EMAILJS_TEMPLATE_ID` - EmailJS template ID  
+- `NEXT_PUBLIC_EMAILJS_PUBLIC_KEY` - EmailJS public key
+
+### Production Features Added
+- ✅ Security headers and HTTPS enforcement
+- ✅ Image optimization and compression
+- ✅ Performance optimizations
+- ✅ Docker containerization support
+- ✅ Automated deployment scripts
+- ✅ Production environment configurations
+
+See `PRODUCTION_CHECKLIST.md` for detailed deployment steps and verification.
+
+---

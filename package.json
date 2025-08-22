@@ -6,7 +6,13 @@
     "export": "next export",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "type-check": "tsc --noEmit",
+    "build:analyze": "ANALYZE=true npm run build",
+    "deploy": "./deploy.sh",
+    "docker:build": "docker build -t portfolio .",
+    "docker:run": "docker run -p 3000:3000 portfolio"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",

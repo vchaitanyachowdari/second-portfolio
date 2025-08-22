@@ -1,5 +1,6 @@
 // IMPORTANT: Replace with your own domain address - it's used for SEO in meta tags and schema
-const baseURL = "https://demo.magic-portfolio.com";
+// Update this with your actual domain when deploying
+const baseURL = "https://your-portfolio-domain.com"; // Replace with your actual domain
 
 const routes = {
   "/": true,
