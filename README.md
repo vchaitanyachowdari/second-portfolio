@@ -1,10 +1,5 @@
-# Magic Portfolio ✨ by Once UI
+# V Chaitanya Chowdari Portfolio Website
 
-**View the Live Demo: [demo.magic-portfolio.com](https://demo.magic-portfolio.com)**
-
-![Magic Portfolio Showcase](https://demo.magic-portfolio.com/images/og/home.jpg)
-
----
 
 ## Table of Contents
 
