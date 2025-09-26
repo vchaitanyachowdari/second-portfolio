@@ -30,5 +30,61 @@
     "imageUrl": "/images/products/custom-software.jpg",
     "externalLink": "https://example.com/custom-software",
     "price": "$3000"
+  },
+  {
+    "id": "product-4",
+    "name": "Automation through AI",
+    "description": "Tailored software solutions to streamline your business operations, improve efficiency, and drive innovation.",
+    "imageUrl": "/images/products/custom-software.jpg",
+    "externalLink": "https://example.com/custom-software",
+    "price": "$100/hour"
+  },
+  {
+    "id": "product-4",
+    "name": "AI Training",
+    "description": "AI Training for Schools and Colleges for Webnars & Events, etc.",
+    "imageUrl": "/images/products/custom-software.jpg",
+    "externalLink": "https://example.com/custom-software",
+    "price": "$300/day"
+  },
+  {
+    "id": "product-4",
+    "name": "All India Database",
+    "description": "",
+    "imageUrl": "/images/products/custom-software.jpg",
+    "externalLink": "https://example.com/custom-software",
+    "price": "Costome"
+  },
+  {
+    "id": "product-4",
+    "name": "AI Chatbots",
+    "description": "AI-driven chatbots that handle customer queries, generate leads, and enhance user experience across platforms.",
+    "imageUrl": "/images/products/custom-software.jpg",
+    "externalLink": "https://example.com/custom-software",
+    "price": "Costome"
+  },
+  {
+    "id": "product-4",
+    "name": "GEO Optimization",
+    "description": "Boost website rankings with on page/off page GEO, technical audits, and AI driven keyword insights.",
+    "imageUrl": "/images/products/custom-software.jpg",
+    "externalLink": "https://example.com/custom-software",
+    "price": "Costome"
+  },
+  {
+    "id": "product-4",
+    "name": "AI Agents",
+    "description": "Deploy AI agents that handle tasks, schedule actions, interact with users, and make decisions intelligently.",
+    "imageUrl": "/images/products/custom-software.jpg",
+    "externalLink": "https://example.com/custom-software",
+    "price": "Costome"
+  },
+  {
+    "id": "product-4",
+    "name": "N8N Automation Service",
+    "description": "",
+    "imageUrl": "/images/products/custom-software.jpg",
+    "externalLink": "https://example.com/custom-software",
+    "price": "$3000"
   }
 ]

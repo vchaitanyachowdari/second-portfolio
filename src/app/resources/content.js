@@ -6,7 +6,7 @@ const person = {
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "AI Generlist",
+  role: "AI Generlist, AI Rsearcher, Builder",
   avatar: "/images/avatar.jpg",
   email: "vchaitanya@chowdari.in",
   location: "Asia/Kolkata", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
@@ -101,25 +101,53 @@ const about = {
     display: true, // set to false to hide this section
     title: "Work Experience",
     experiences: [
+        {
+          company: "Robotronix and Scalability Technology",
+          timeframe: "Aug 2025 – Present",
+          role: "Co-Founder - Lead - AI/Full Stack Development",
+          achievements: [
+            <>
+              
+            </>,
+          ],
+          images: [
+            // optional: leave the array empty if you don't want to display images
+            {
+              src: "",
+              alt: "",
+              width: 16,
+              height: 9,
+            },
+          ],
+        },
       {
-        company: "VC AI Creator",
-        timeframe: "2025 - Present",
+        company: "VC AI Marketing",
+        timeframe: "July 2025 – Present",
         role: "Founder and CEO",
         achievements: [
           <>
-            Defined the vision, strategy, and roadmap for Vc AI Creator driving innovation at the intersection of AI, automation, and product development.
+            Partnered with 15+ companies, building and maintaining long-term strategic relationships.
           </>,
           <>
-            Built and managed cross-functional teams, collaborating with designers, engineers, and product managers to deliver high impact solutions.
+            Scaled from ₹3.5 Lakhs investment to ₹1.8 Crore valuation within the first phase of operations (by Sep 2025).
           </>,
           <>
-            Represented the company in partnerships, pitches, and technical discussions, aligning business objectives with product execution.
+            Built a team of skilled professionals and fostered a strong culture of innovation and accountability.
           </>,
           <>
-            Drove go-to-market strategies, positioning Vc AI Creator as a forward-thinking brand in AI automation, voice agents, and Web3.
+            Achieved 100% client retention rate in the first year, with repeat engagements from multiple partners.
           </>,
           <>
-            Led architecture and systems design, implementing scalable, modular platforms using React.js, React Native, and AI integration pipelines.
+            Secured recognition as an emerging AI driven startup, gaining visibility among industry peers and professionals.
+          </>,
+          <>
+            Implemented cost effective growth strategies, achieving profitability without external funding.
+          </>,
+          <>
+            Developed a scalable business model that enables fast expansion into new domains and markets.
+          </>,
+          <>
+            Built a strong digital presence across LinkedIn, Instagram, and YouTube, growing an engaged audience and brand trust.
           </>,
         ],
         images: [
@@ -133,20 +161,41 @@ const about = {
         ],
       },
       {
-        company: "EventureX",
-        timeframe: "Jan 2025 - Jun 2025",
-        role: "Founder",
+        company: "VC AI Creator",
+        timeframe: "2025 - Present",
+        role: "Founder and CEO",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Partnered with 15+ companies, building and maintaining long-term strategic relationships.
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Scaled from ₹1.5 Lakhs investment to ₹1 Crore valuation within the first phase of operations (by Aug 2025).
+          </>,
+          <>
+            Built a team of skilled professionals and fostered a strong culture of innovation and accountability.
+          </>,
+          <>
+            Successfully delivered AI driven automation and digital solutions that solved critical business challenges for clients.
+          </>,
+          <>
+            Expanded portfolio to include AI agents, web applications, digital marketing, GEO, and consultancy services broadening market reach.
+          </>,
+          <>
+            Achieved 100% client retention rate in the first year, with repeat engagements from multiple partners.
+          </>,
+          <>
+            Secured recognition as an emerging AI driven startup, gaining visibility among industry peers and professionals.
           </>,
         ],
-        images: [],
+        images: [
+          // optional: leave the array empty if you don't want to display images
+          {
+            src: "/images/company/vcaicreator/vcaicreator-01.png",
+            alt: "Pitch Disc Slides",
+            width: 16,
+            height: 9,
+          },
+        ],
       },
       {
         company: "Physics Mindboggler",
