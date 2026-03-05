@@ -2,7 +2,7 @@ import { baseURL } from "@/app/resources";
 
 export const seoConfig = {
   title: "V Chaitanya Chowdari | AI Generalist, Researcher, Builder & Founder",
-  description: "Chaitanya Chowdari – AI Generalist, Researcher & Builder. Founder of VC AI Creator and Commonly Technologies. Explore work, blog, gallery, resources, services, and store. Hire for AI automation, LLM integration, web development, and consulting in India.",
+  description: "Chaitanya Chowdari – AI Generalist, Researcher & Builder. Founder of VC AI Creator and Commonly Technologies. Explore work, blog, gallery, resources, and services. Hire for AI automation, LLM integration, web development, and consulting in India.",
   keywords: [
     // Cluster 1 – Identity / Brand
     "Chaitanya Chowdari",
@@ -84,10 +84,8 @@ export const seoConfig = {
     "work blog",
     "gallery resources",
     "resources services",
-    "services store",
     "work blog gallery",
     "blog gallery resources",
-    "resources services store",
     "linkedin work",
   ],
 

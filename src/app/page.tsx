@@ -10,6 +10,7 @@ import { Mailchimp } from "@/components";
 import RollingGallery from "@/components/RollingGallery";
 import { Posts } from "@/components/blog/Posts";
 import { Meta, Schema } from "@/once-ui/modules";
+import { TrustedBrands } from "@/components/TrustedBrands";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -87,6 +88,7 @@ export default function Home() {
         </Column>
       </Column>
       <RollingGallery />
+      <TrustedBrands />
       <RevealFx translateY="16" delay={0.6}>
         <Heading as="h2" variant="display-strong-xs" wrap="balance" paddingBottom="m">
           Featured Work

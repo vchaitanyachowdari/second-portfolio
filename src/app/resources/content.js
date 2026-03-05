@@ -54,7 +54,7 @@ const home = {
   image: "/images/og/home.jpg",
   label: "Home",
   title: `V Chaitanya Chowdari | AI Generalist, Researcher & Builder`,
-  description: `Chaitanya Chowdari – AI Generalist, Researcher & Builder. Explore work, blog, gallery, resources, services, and store for cutting-edge AI solutions.`,
+  description: `Chaitanya Chowdari – AI Generalist, Researcher & Builder. Explore work, blog, gallery, resources, and services for cutting-edge AI solutions.`,
   headline: <>Building bridges between Technology and Innovation</>,
   featured: {
     display: true,
@@ -66,8 +66,8 @@ const home = {
       I&apos;m V Chaitanya Chowdari, an AI Generalist and Researcher at VC AI Creator.
       I help businesses leverage AI automation, build intelligent agents, and craft
       digital solutions. Browse my work portfolio, read the blog for AI insights,
-      explore the gallery, discover curated resources, check out services, or visit
-      the store. Connect with me on LinkedIn to collaborate.
+      explore the gallery, discover curated resources, or check out services.
+      Connect with me on LinkedIn to collaborate.
     </>
   ),
   faq: [
@@ -540,12 +540,6 @@ const resources = {
   description: `Useful resources and tools curated by ${person.name}`,
 };
 
-const store = {
-  path: "/store",
-  label: "Store",
-  title: `Store – ${person.name}`,
-  description: `Products and services offered by ${person.name}`,
-};
 
 const tools = {
   path: "/tools",
@@ -590,7 +584,6 @@ export {
   work,
   gallery,
   resources,
-  store,
   tools,
   testimonials,
 };
